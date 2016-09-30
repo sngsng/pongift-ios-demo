@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <Contacts/Contacts.h>
+#import <ContactsUI/ContactsUI.h>
 #import <UIKit/UIKit.h>
 
 @interface PongiftContactsManager : NSObject
 
 + (id)sharedManager;
-- (void)fetchBirthDayContactsWithController:(UIViewController *)controller;
+- (void)fetchBirthDayContactsWithController:(UIViewController *)controller andCompletion:(void(^)(NSMutableArray* contacts))completion;
+- (void)openContactsWithController:(UIViewController *) controller completion:(void(^)(CNContact* contact))pickerCompletion;
 
 @end

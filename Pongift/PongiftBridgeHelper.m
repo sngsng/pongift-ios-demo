@@ -61,7 +61,40 @@
     [_bridge registerHandler:BridgeCallbackGetContacts handler:^(id data, WVJBResponseCallback responseCallback) {
         
         PongiftContactsManager *contactsManager = [PongiftContactsManager sharedManager];
-        [contactsManager fetchBirthDayContactsWithController:_controller];
+        [contactsManager fetchBirthDayContactsWithController:_controller andCompletion:^(NSMutableArray *contacts) {
+            
+            NSLog(@"%@", contacts);
+            responseCallback(contacts);
+        }];
+    }];
+    
+    
+    // 연락처 UI
+    [_bridge registerHandler:BridgeCallbackOpenContanctUI handler:^(id data, WVJBResponseCallback responseCallback) {
+        
+        
+        PongiftContactsManager *contactsManager = [PongiftContactsManager sharedManager];
+        
+        [contactsManager openContactsWithController:_controller completion:^(CNContact *contact) {
+            
+            NSArray *phoneNumbers = [contact phoneNumbers];
+            NSString *phoneNumberString = @"";
+            
+            if ([phoneNumbers count] != 0) {
+                
+                CNLabeledValue *phoneNumberValue = phoneNumbers[0];
+                CNPhoneNumber *phoneNumber = phoneNumberValue.value;
+                phoneNumberString = phoneNumber.stringValue;
+
+            }
+            
+            
+            [_bridge callHandler:@"getContact" data:phoneNumberString responseCallback:^(id responseData) {
+                
+            }];
+        }];
+        
+        responseCallback(nil);
     }];
 }
 

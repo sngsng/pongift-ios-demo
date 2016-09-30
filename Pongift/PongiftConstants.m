@@ -11,7 +11,7 @@
 @implementation PongiftConstants
 
 NSString *const BridgeCallbackGetContacts = @"getContacts";
-NSString *const BridgeCallbackOpenContanctUI = @"openContactUI";
+NSString *const BridgeCallbackOpenContanctUI = @"openContactsUI";
 NSString *const BridgeCallbackGetServiceId = @"getServiceID";
 NSString *const BridgeCallbackCloseWebView = @"closeWebView";
 NSString *const BridgeCallbackRefreshWebView = @"refreshWebView";

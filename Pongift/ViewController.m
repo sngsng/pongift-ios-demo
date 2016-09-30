@@ -19,12 +19,17 @@
     [super viewDidLoad];
 //    self.view.backgroundColor = [UIColor blackColor];
     
+    
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:animated];
     
+    
+}
+- (IBAction)pushOpenPongiftAgent:(id)sender {
     [self presentViewController:[[PongiftViewController alloc] init] animated:true completion:nil];
 }
 

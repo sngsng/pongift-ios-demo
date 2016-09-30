@@ -8,10 +8,16 @@
 
 #import "PongiftContactsManager.h"
 #import "PongiftUtils.h"
+#import "PongiftViewController.h"
+
+@interface PongiftContactsManager()<CNContactPickerDelegate>
+
+@end
 
 @implementation PongiftContactsManager
 
 CNContactStore *contactStore;
+void (^contactPickerCompletion)(CNContact* contact);
 
 + (id)sharedManager {
     static PongiftContactsManager *instance = nil;
@@ -39,8 +45,9 @@ CNContactStore *contactStore;
 }
 
 // 연락처 리스트
-- (void)fetchBirthDayContactsWithController:(UIViewController *)controller {
+- (void) fetchBirthDayContactsWithController:(UIViewController *)controller andCompletion:(void(^)(NSMutableArray* contacts))completion {
     
+    NSMutableArray *contacts = [[NSMutableArray alloc] init];
     [self requestForContactsAccessWithCompletion:^(BOOL accessGranted) {
         
         if (accessGranted) {
@@ -48,19 +55,67 @@ CNContactStore *contactStore;
             NSArray *keys = @[CNContactGivenNameKey,CNContactThumbnailImageDataKey,CNContactPhoneNumbersKey,CNContactDatesKey,CNContactBirthdayKey];
             CNContactFetchRequest *fetchRequest = [[CNContactFetchRequest alloc] initWithKeysToFetch:keys];
             NSError *error;
+            
+            
+            
             [contactStore enumerateContactsWithFetchRequest:fetchRequest error:&error usingBlock:^(CNContact * _Nonnull contact, BOOL * _Nonnull stop) {
                 
                 NSString *name = [contact givenName];
-                NSData *thumnail = [contact thumbnailImageData];
+//                NSData *thumnail = [contact thumbnailImageData];
+//                NSDateComponents *birthday = [contact birthday];
+//                NSArray *dates = [contact dates];
                 NSArray *phoneNumbers = [contact phoneNumbers];
-                NSDateComponents *birthday = [contact birthday];
-                NSArray *dates = [contact dates];
+                
+                
+                
+                NSString *phoneNumberString = @"";
+                
+                if ([phoneNumbers count] != 0) {
+                    
+                    CNLabeledValue *phoneNumberValue = phoneNumbers[0];
+                    CNPhoneNumber *phoneNumber = phoneNumberValue.value;
+                    phoneNumberString = phoneNumber.stringValue;
+                    
+                }
+                
+                NSMutableDictionary *json = [[NSMutableDictionary alloc] init];
+                [json setValue:name forKey:@"name"];
+                [json setValue:phoneNumberString forKey:@"phoneNumber"];
+                
+                [contacts addObject:json];
                 
                 NSLog(@"이름 : %@, 이미지: %@, 휴대폰번호 :%@, 생일 : %@ ", [contact givenName], [contact thumbnailImageData], [contact phoneNumbers], [contact birthday]);
             }];
+            
+            completion(contacts);
+            
+            
+        }
+        else {
+            
+            
         }
         
     } andController:controller];
+}
+
+// 연락처 UI
+- (void)openContactsWithController:(UIViewController *) controller completion:(void(^)(CNContact* contact))pickerCompletion {
+    
+    
+    [self requestForContactsAccessWithCompletion:^(BOOL accessGranted) {
+        
+        if (accessGranted) {
+            
+            CNContactPickerViewController *contactPickerViewController = [[CNContactPickerViewController alloc] init];
+            contactPickerViewController.delegate = self;
+            contactPickerCompletion = pickerCompletion;
+            [controller presentViewController:contactPickerViewController animated:true completion:nil];
+        }
+    } andController:controller];
+    
+    
+    
 }
 
 // 연락처 권한 요청
@@ -117,6 +172,26 @@ CNContactStore *contactStore;
             
         }];
     });
+}
+
+- (void)contactPickerDidCancel:(CNContactPickerViewController *)picker {
+    
+    if (contactPickerCompletion != nil) {
+        
+        NSLog(@"contactPickerDidCancel");
+        contactPickerCompletion(nil);
+        contactPickerCompletion = nil;
+    }
+}
+
+- (void)contactPicker:(CNContactPickerViewController *)picker didSelectContact:(CNContact *)contact {
+    
+    if (contactPickerCompletion != nil) {
+        
+        NSLog(@"didSelectContact");
+        contactPickerCompletion(contact);
+        contactPickerCompletion = nil;
+    }
 }
 
 

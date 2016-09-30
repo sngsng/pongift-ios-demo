@@ -24,6 +24,7 @@
 		A003BDDD1D9D8FFB00FEE4ED /* PongiftBridgeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A003BDDC1D9D8FFB00FEE4ED /* PongiftBridgeHelper.m */; };
 		A003BDE01D9D9DCE00FEE4ED /* PongiftContactsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A003BDDF1D9D9DCE00FEE4ED /* PongiftContactsManager.m */; };
 		A003BDE31D9DA38400FEE4ED /* PongiftUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A003BDE21D9DA38400FEE4ED /* PongiftUtils.m */; };
+		A00E87151D9E7D3A0078F897 /* PongiftContact.m in Sources */ = {isa = PBXBuildFile; fileRef = A00E87141D9E7D3A0078F897 /* PongiftContact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		A003BDDF1D9D9DCE00FEE4ED /* PongiftContactsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftContactsManager.m; sourceTree = "<group>"; };
 		A003BDE11D9DA38400FEE4ED /* PongiftUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftUtils.h; sourceTree = "<group>"; };
 		A003BDE21D9DA38400FEE4ED /* PongiftUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftUtils.m; sourceTree = "<group>"; };
+		A00E87131D9E7D3A0078F897 /* PongiftContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftContact.h; sourceTree = "<group>"; };
+		A00E87141D9E7D3A0078F897 /* PongiftContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftContact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +176,8 @@
 				A003BDDF1D9D9DCE00FEE4ED /* PongiftContactsManager.m */,
 				A003BDE11D9DA38400FEE4ED /* PongiftUtils.h */,
 				A003BDE21D9DA38400FEE4ED /* PongiftUtils.m */,
+				A00E87131D9E7D3A0078F897 /* PongiftContact.h */,
+				A00E87141D9E7D3A0078F897 /* PongiftContact.m */,
 			);
 			name = PongiftSDK;
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 				A003BDE31D9DA38400FEE4ED /* PongiftUtils.m in Sources */,
 				A003BDD11D9D835800FEE4ED /* WebViewJavascriptBridge_JS.m in Sources */,
 				A003BD961D9D670A00FEE4ED /* AppDelegate.m in Sources */,
+				A00E87151D9E7D3A0078F897 /* PongiftContact.m in Sources */,
 				A003BDDD1D9D8FFB00FEE4ED /* PongiftBridgeHelper.m in Sources */,
 				A003BDD21D9D835800FEE4ED /* WebViewJavascriptBridgeBase.m in Sources */,
 				A003BDD91D9D89C900FEE4ED /* PongiftConstants.m in Sources */,
@@ -491,6 +497,7 @@
 				A003BDB21D9D670A00FEE4ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A003BDB31D9D670A00FEE4ED /* Build configuration list for PBXNativeTarget "PongiftTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +506,7 @@
 				A003BDB51D9D670A00FEE4ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
