@@ -99,11 +99,13 @@ void (^contactPickerCompletion)(CNContact* contact);
                     
                     
                     NSString *name = [contact givenName];
-                    NSInteger year = [birthday year];
+                    NSString *year = [NSString stringWithFormat:@"%ld",[birthday year]];
                     NSInteger month = [birthday month];
                     NSInteger day = [birthday day];
                     
-                    NSDictionary *json = @{kName:name, kImage:imageString};
+//                    NSDictionary *json = @{kName:name, kImage:imageString,
+//                                           kBirthYear:year, kBirthMonth:, kBirthDay:day,
+//                                           kPhone:phoneNumberString};
                     
                     
                 }

@@ -40,7 +40,7 @@ NSString *filePath = @"searchHistories.out";
     }
     else {
         
-        [willUpdateHistories addObject:searchHistory];
+        [willUpdateHistories addObject:searchHistory.getJson];
     }
     
     [NSKeyedArchiver archiveRootObject:willUpdateHistories toFile:[self historyFilePath]];
