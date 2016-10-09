@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "PongiftViewController.h"
+#import "PongiftAgent.h"
+#import "PongiftPersistenceManager.h"
 
 @interface ViewController ()
 
@@ -17,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.view.backgroundColor = [UIColor blackColor];
+    //    self.view.backgroundColor = [UIColor blackColor];
     
     
     
@@ -30,7 +31,19 @@
     
 }
 - (IBAction)pushOpenPongiftAgent:(id)sender {
-    [self presentViewController:[[PongiftViewController alloc] init] animated:true completion:nil];
+
+    
+    
+    PongiftAgent *agent = [PongiftAgent sharedInstance];
+    NSString *accessKey = @"j8NtyUuoubAfGShaRQF2MA==";
+    NSString *secretKey = @"bD3QeKX2rhUcSVlubuy2Dg==";
+    [agent initializePongiftWithSecretKey:secretKey andAccessKey:accessKey completion:^(bool completion) {
+        
+        if (completion) {
+            
+            [agent openPongiftViewController:self];
+        }
+    }];
 }
 
 

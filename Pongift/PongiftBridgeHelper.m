@@ -9,7 +9,8 @@
 #import "PongiftBridgeHelper.h"
 #import "PongiftConstants.h"
 #import "PongiftContactsManager.h"
-
+#import "PongiftPersistenceManager.h"
+#import "PongiftCookieStore.h"
 
 @interface PongiftBridgeHelper()
 
@@ -34,6 +35,14 @@
 }
 
 - (void)setUpBridgeCallback {
+    
+    // 서비스 아이디 리턴
+    [_bridge registerHandler:BridgeCallbackGetServiceId handler:^(id data, WVJBResponseCallback responseCallback) {
+        
+        NSString *serviceId = [[PongiftPersistenceManager sharedInstance] serviceId];
+        NSDictionary *serviceIdJson = @{kServiceId : serviceId};
+        responseCallback(serviceIdJson);
+    }];
     
     // 웹뷰 종료
     [_bridge registerHandler:BridgeCallbackCloseWebView handler:^(id data, WVJBResponseCallback responseCallback) {
@@ -89,12 +98,70 @@
             }
             
             
-            [_bridge callHandler:@"getContact" data:phoneNumberString responseCallback:^(id responseData) {
+            [_bridge callHandler:BridgeCallerGetContact data:phoneNumberString responseCallback:^(id responseData) {
                 
             }];
         }];
         
         responseCallback(nil);
+    }];
+    
+    // 로그아웃
+    [_bridge registerHandler:BridgeCallbackLogout handler:^(id data, WVJBResponseCallback responseCallback) {
+        
+        [[PongiftCookieStore sharedInstance] removeCookie];
+        responseCallback(nil);
+    }];
+    
+    // 최근검색 리스트 리턴
+    [_bridge registerHandler:BridgeCallbackGetSearchHistories handler:^(id data, WVJBResponseCallback responseCallback) {
+        
+        NSArray *searchHistories = [[PongiftPersistenceManager sharedInstance] getSearchHistories];
+        
+        NSDictionary *searchHistoriesJson = @{kRows : searchHistories};
+        
+        responseCallback(searchHistoriesJson);
+        
+    }];
+    
+    // 최근검색어 추가
+    [_bridge registerHandler:BridgeCallbackAddSearchHistory handler:^(id data, WVJBResponseCallback responseCallback) {
+        
+        if ([data isKindOfClass:[NSDictionary class]]) {
+            
+            NSDictionary *params = (NSDictionary *)data;
+            NSString *title = [params objectForKey:kTitle];
+            NSString *date = [params objectForKey:kDate];
+            
+            PongiftPersistenceManager *manager = [PongiftPersistenceManager sharedInstance];
+            PongiftSearchHistory *searchHistory = [[PongiftSearchHistory alloc] initWithTitle:title andDate:date];
+            [manager addSearchHistory:searchHistory];
+            
+            NSArray *searchHistories = [manager getSearchHistories];
+            NSDictionary *searchHistoriesJson = @{kRows : searchHistories};
+            responseCallback(searchHistoriesJson);
+            
+        }
+        
+    }];
+    
+    // 최근검색어 삭제
+    [_bridge registerHandler:BridgeCallbackRemoveSearchHistory handler:^(id data, WVJBResponseCallback responseCallback) {
+        
+        if ([data isKindOfClass:[NSDictionary class]]) {
+            
+            NSDictionary *params = (NSDictionary *)data;
+            NSString *indexParam = [params objectForKey:kIndex];
+            
+            NSInteger index = [indexParam integerValue];
+            
+            PongiftPersistenceManager *manager = [PongiftPersistenceManager sharedInstance];
+            [manager removeSearchHistoryAtIndex:index];
+            
+            NSArray *searchHistories = [manager getSearchHistories];
+            NSDictionary *searchHistoriesJson = @{kRows : searchHistories};
+            responseCallback(searchHistoriesJson);
+        }
     }];
 }
 

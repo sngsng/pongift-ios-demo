@@ -25,6 +25,11 @@
 		A003BDE01D9D9DCE00FEE4ED /* PongiftContactsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A003BDDF1D9D9DCE00FEE4ED /* PongiftContactsManager.m */; };
 		A003BDE31D9DA38400FEE4ED /* PongiftUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A003BDE21D9DA38400FEE4ED /* PongiftUtils.m */; };
 		A00E87151D9E7D3A0078F897 /* PongiftContact.m in Sources */ = {isa = PBXBuildFile; fileRef = A00E87141D9E7D3A0078F897 /* PongiftContact.m */; };
+		A0B040E01DAA4DF800E5A676 /* PongiftPersistenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B040DF1DAA4DF800E5A676 /* PongiftPersistenceManager.m */; };
+		A0B040E31DAA6C5A00E5A676 /* PongiftSearchHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B040E21DAA6C5A00E5A676 /* PongiftSearchHistory.m */; };
+		A0B481C51DAA210000EAE48D /* PongiftRestService.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B481C41DAA210000EAE48D /* PongiftRestService.m */; };
+		A0B481C81DAA2FF600EAE48D /* PongiftCookieStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B481C71DAA2FF600EAE48D /* PongiftCookieStore.m */; };
+		E2BD0153FE99CF735B43C8C1 /* libPods-Pongift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E64BFEF61E341ABE23322C /* libPods-Pongift.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		101AB35B8086487C175E1236 /* Pods-Pongift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pongift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pongift/Pods-Pongift.debug.xcconfig"; sourceTree = "<group>"; };
 		A003BD8E1D9D670A00FEE4ED /* Pongift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pongift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A003BD921D9D670A00FEE4ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A003BD941D9D670A00FEE4ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,6 +79,17 @@
 		A003BDE21D9DA38400FEE4ED /* PongiftUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftUtils.m; sourceTree = "<group>"; };
 		A00E87131D9E7D3A0078F897 /* PongiftContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftContact.h; sourceTree = "<group>"; };
 		A00E87141D9E7D3A0078F897 /* PongiftContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftContact.m; sourceTree = "<group>"; };
+		A0B040DE1DAA4DF800E5A676 /* PongiftPersistenceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftPersistenceManager.h; sourceTree = "<group>"; };
+		A0B040DF1DAA4DF800E5A676 /* PongiftPersistenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftPersistenceManager.m; sourceTree = "<group>"; };
+		A0B040E11DAA6C5A00E5A676 /* PongiftSearchHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftSearchHistory.h; sourceTree = "<group>"; };
+		A0B040E21DAA6C5A00E5A676 /* PongiftSearchHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftSearchHistory.m; sourceTree = "<group>"; };
+		A0B481C31DAA210000EAE48D /* PongiftRestService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftRestService.h; sourceTree = "<group>"; };
+		A0B481C41DAA210000EAE48D /* PongiftRestService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftRestService.m; sourceTree = "<group>"; };
+		A0B481C61DAA2FF600EAE48D /* PongiftCookieStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftCookieStore.h; sourceTree = "<group>"; };
+		A0B481C71DAA2FF600EAE48D /* PongiftCookieStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftCookieStore.m; sourceTree = "<group>"; };
+		B3E64BFEF61E341ABE23322C /* libPods-Pongift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pongift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAF556F19E969AA00A5C580E /* libPods-PongiftTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PongiftTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1B1B12F23C9A48750D6D347 /* Pods-Pongift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pongift.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pongift/Pods-Pongift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2BD0153FE99CF735B43C8C1 /* libPods-Pongift.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,12 +111,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B992B73A3B1F67CC6B44484 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				101AB35B8086487C175E1236 /* Pods-Pongift.debug.xcconfig */,
+				F1B1B12F23C9A48750D6D347 /* Pods-Pongift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A003BD851D9D670A00FEE4ED = {
 			isa = PBXGroup;
 			children = (
 				A003BD901D9D670A00FEE4ED /* Pongift */,
 				A003BDAA1D9D670A00FEE4ED /* PongiftTests */,
 				A003BD8F1D9D670A00FEE4ED /* Products */,
+				0B992B73A3B1F67CC6B44484 /* Pods */,
+				A7CAFD6B3258CDCA5D7B6EBE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,22 +193,79 @@
 		A003BDDA1D9D8A2C00FEE4ED /* PongiftSDK */ = {
 			isa = PBXGroup;
 			children = (
-				A003BDB61D9D672400FEE4ED /* PongiftViewController.h */,
-				A003BDB71D9D672400FEE4ED /* PongiftViewController.m */,
-				A003BDD41D9D87FF00FEE4ED /* PongiftAgent.h */,
-				A003BDD51D9D87FF00FEE4ED /* PongiftAgent.m */,
+				A0B040E81DAA703000E5A676 /* Utils */,
+				A0B040E71DAA702600E5A676 /* Controllers */,
+				A0B040E61DAA701600E5A676 /* Network */,
+				A0B040E51DAA700800E5A676 /* Managers */,
+				A0B040E41DAA6FF700E5A676 /* Models */,
 				A003BDD71D9D89C900FEE4ED /* PongiftConstants.h */,
 				A003BDD81D9D89C900FEE4ED /* PongiftConstants.m */,
-				A003BDDB1D9D8FFB00FEE4ED /* PongiftBridgeHelper.h */,
-				A003BDDC1D9D8FFB00FEE4ED /* PongiftBridgeHelper.m */,
-				A003BDDE1D9D9DCE00FEE4ED /* PongiftContactsManager.h */,
-				A003BDDF1D9D9DCE00FEE4ED /* PongiftContactsManager.m */,
-				A003BDE11D9DA38400FEE4ED /* PongiftUtils.h */,
-				A003BDE21D9DA38400FEE4ED /* PongiftUtils.m */,
-				A00E87131D9E7D3A0078F897 /* PongiftContact.h */,
-				A00E87141D9E7D3A0078F897 /* PongiftContact.m */,
 			);
 			name = PongiftSDK;
+			sourceTree = "<group>";
+		};
+		A0B040E41DAA6FF700E5A676 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A00E87131D9E7D3A0078F897 /* PongiftContact.h */,
+				A00E87141D9E7D3A0078F897 /* PongiftContact.m */,
+				A0B040E11DAA6C5A00E5A676 /* PongiftSearchHistory.h */,
+				A0B040E21DAA6C5A00E5A676 /* PongiftSearchHistory.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A0B040E51DAA700800E5A676 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A003BDDE1D9D9DCE00FEE4ED /* PongiftContactsManager.h */,
+				A003BDDF1D9D9DCE00FEE4ED /* PongiftContactsManager.m */,
+				A0B040DE1DAA4DF800E5A676 /* PongiftPersistenceManager.h */,
+				A0B040DF1DAA4DF800E5A676 /* PongiftPersistenceManager.m */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		A0B040E61DAA701600E5A676 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A0B481C31DAA210000EAE48D /* PongiftRestService.h */,
+				A0B481C41DAA210000EAE48D /* PongiftRestService.m */,
+				A0B481C61DAA2FF600EAE48D /* PongiftCookieStore.h */,
+				A0B481C71DAA2FF600EAE48D /* PongiftCookieStore.m */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		A0B040E71DAA702600E5A676 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A003BDB61D9D672400FEE4ED /* PongiftViewController.h */,
+				A003BDB71D9D672400FEE4ED /* PongiftViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A0B040E81DAA703000E5A676 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A003BDD41D9D87FF00FEE4ED /* PongiftAgent.h */,
+				A003BDD51D9D87FF00FEE4ED /* PongiftAgent.m */,
+				A003BDDB1D9D8FFB00FEE4ED /* PongiftBridgeHelper.h */,
+				A003BDDC1D9D8FFB00FEE4ED /* PongiftBridgeHelper.m */,
+				A003BDE11D9DA38400FEE4ED /* PongiftUtils.h */,
+				A003BDE21D9DA38400FEE4ED /* PongiftUtils.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		A7CAFD6B3258CDCA5D7B6EBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3E64BFEF61E341ABE23322C /* libPods-Pongift.a */,
+				DAF556F19E969AA00A5C580E /* libPods-PongiftTests.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,9 +275,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A003BDB01D9D670A00FEE4ED /* Build configuration list for PBXNativeTarget "Pongift" */;
 			buildPhases = (
+				DA96A9F3D879D6F3E0573A4A /* [CP] Check Pods Manifest.lock */,
 				A003BD8A1D9D670A00FEE4ED /* Sources */,
 				A003BD8B1D9D670A00FEE4ED /* Frameworks */,
 				A003BD8C1D9D670A00FEE4ED /* Resources */,
+				9D254093A087B7457F7B4025 /* [CP] Embed Pods Frameworks */,
+				CD225274EB3D3135AEAF37CB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,9 +295,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A003BDB31D9D670A00FEE4ED /* Build configuration list for PBXNativeTarget "PongiftTests" */;
 			buildPhases = (
+				4CE998B50587BEC68F65627C /* [CP] Check Pods Manifest.lock */,
 				A003BDA31D9D670A00FEE4ED /* Sources */,
 				A003BDA41D9D670A00FEE4ED /* Frameworks */,
 				A003BDA51D9D670A00FEE4ED /* Resources */,
+				6BB9F5FC487DD58595980CD2 /* [CP] Embed Pods Frameworks */,
+				FD8E3451532FAE51F4951E5E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -280,12 +372,107 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4CE998B50587BEC68F65627C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6BB9F5FC487DD58595980CD2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PongiftTests/Pods-PongiftTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D254093A087B7457F7B4025 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pongift/Pods-Pongift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD225274EB3D3135AEAF37CB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pongift/Pods-Pongift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA96A9F3D879D6F3E0573A4A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD8E3451532FAE51F4951E5E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PongiftTests/Pods-PongiftTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A003BD8A1D9D670A00FEE4ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A003BDE01D9D9DCE00FEE4ED /* PongiftContactsManager.m in Sources */,
+				A0B040E01DAA4DF800E5A676 /* PongiftPersistenceManager.m in Sources */,
+				A0B040E31DAA6C5A00E5A676 /* PongiftSearchHistory.m in Sources */,
 				A003BDB81D9D672400FEE4ED /* PongiftViewController.m in Sources */,
 				A003BD991D9D670A00FEE4ED /* ViewController.m in Sources */,
 				A003BDE31D9DA38400FEE4ED /* PongiftUtils.m in Sources */,
@@ -297,6 +484,8 @@
 				A003BDD91D9D89C900FEE4ED /* PongiftConstants.m in Sources */,
 				A003BDD61D9D87FF00FEE4ED /* PongiftAgent.m in Sources */,
 				A003BDD31D9D835800FEE4ED /* WKWebViewJavascriptBridge.m in Sources */,
+				A0B481C51DAA210000EAE48D /* PongiftRestService.m in Sources */,
+				A0B481C81DAA2FF600EAE48D /* PongiftCookieStore.m in Sources */,
 				A003BD931D9D670A00FEE4ED /* main.m in Sources */,
 				A003BDD01D9D835800FEE4ED /* WebViewJavascriptBridge.m in Sources */,
 			);
@@ -358,6 +547,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -405,6 +595,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -430,12 +621,14 @@
 		};
 		A003BDB11D9D670A00FEE4ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 101AB35B8086487C175E1236 /* Pods-Pongift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3BX7UAG4ZQ;
 				INFOPLIST_FILE = Pongift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Pongift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -443,12 +636,14 @@
 		};
 		A003BDB21D9D670A00FEE4ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1B1B12F23C9A48750D6D347 /* Pods-Pongift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3BX7UAG4ZQ;
 				INFOPLIST_FILE = Pongift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Pongift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

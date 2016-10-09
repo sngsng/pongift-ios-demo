@@ -8,6 +8,7 @@
 
 #import "PongiftContactsManager.h"
 #import "PongiftUtils.h"
+#import "PongiftConstants.h"
 #import "PongiftViewController.h"
 
 @interface PongiftContactsManager()<CNContactPickerDelegate>
@@ -48,6 +49,19 @@ void (^contactPickerCompletion)(CNContact* contact);
 - (void) fetchBirthDayContactsWithController:(UIViewController *)controller andCompletion:(void(^)(NSMutableArray* contacts))completion {
     
     NSMutableArray *contacts = [[NSMutableArray alloc] init];
+    NSMutableArray *january = [[NSMutableArray alloc] init];
+    NSMutableArray *february = [[NSMutableArray alloc] init];
+    NSMutableArray *march = [[NSMutableArray alloc] init];
+    NSMutableArray *april = [[NSMutableArray alloc] init];
+    NSMutableArray *may = [[NSMutableArray alloc] init];
+    NSMutableArray *june = [[NSMutableArray alloc] init];
+    NSMutableArray *july = [[NSMutableArray alloc] init];
+    NSMutableArray *august = [[NSMutableArray alloc] init];
+    NSMutableArray *september = [[NSMutableArray alloc] init];
+    NSMutableArray *october = [[NSMutableArray alloc] init];
+    NSMutableArray *november = [[NSMutableArray alloc] init];
+    NSMutableArray *december = [[NSMutableArray alloc] init];
+    
     [self requestForContactsAccessWithCompletion:^(BOOL accessGranted) {
         
         if (accessGranted) {
@@ -60,27 +74,48 @@ void (^contactPickerCompletion)(CNContact* contact);
             
             [contactStore enumerateContactsWithFetchRequest:fetchRequest error:&error usingBlock:^(CNContact * _Nonnull contact, BOOL * _Nonnull stop) {
                 
-                NSString *name = [contact givenName];
-//                NSData *thumnail = [contact thumbnailImageData];
-//                NSDateComponents *birthday = [contact birthday];
-//                NSArray *dates = [contact dates];
-                NSArray *phoneNumbers = [contact phoneNumbers];
-                
-                
-                
-                NSString *phoneNumberString = @"";
-                
-                if ([phoneNumbers count] != 0) {
+                NSDateComponents *birthday = [contact birthday];
+            
+                if (birthday != nil) {
                     
-                    CNLabeledValue *phoneNumberValue = phoneNumbers[0];
-                    CNPhoneNumber *phoneNumber = phoneNumberValue.value;
-                    phoneNumberString = phoneNumber.stringValue;
+                    NSArray *phoneNumbers = [contact phoneNumbers];
+                    NSString *phoneNumberString = @"";
+                    NSString *imageString = @"";
+                    NSData *thumbImageData = [contact thumbnailImageData];
+                    
+                    if (thumbImageData != nil) {
+                        
+                        imageString = [[NSString alloc] initWithData:thumbImageData encoding:NSUTF8StringEncoding];
+                    }
+                    
+                    if ([phoneNumbers count] != 0) {
+                        
+                        CNLabeledValue *phoneNumberValue = phoneNumbers[0];
+                        CNPhoneNumber *phoneNumber = phoneNumberValue.value;
+                        phoneNumberString = phoneNumber.stringValue;
+                        
+                    }
+                    
+                    
+                    
+                    NSString *name = [contact givenName];
+                    NSInteger year = [birthday year];
+                    NSInteger month = [birthday month];
+                    NSInteger day = [birthday day];
+                    
+                    NSDictionary *json = @{kName:name, kImage:imageString};
+                    
                     
                 }
+
+                
+                
+                
+                
                 
                 NSMutableDictionary *json = [[NSMutableDictionary alloc] init];
-                [json setValue:name forKey:@"name"];
-                [json setValue:phoneNumberString forKey:@"phoneNumber"];
+//                [json setValue:name forKey:@"name"];
+//                [json setValue:phoneNumberString forKey:@"phoneNumber"];
                 
                 [contacts addObject:json];
                 

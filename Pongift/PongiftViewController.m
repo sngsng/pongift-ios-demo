@@ -11,6 +11,8 @@
 #import <Contacts/Contacts.h>
 #import "PongiftBridgeHelper.h"
 #import "PongiftContactsManager.h"
+#import "PongiftConstants.h"
+#import "PongiftCookieStore.h"
 
 @interface PongiftViewController () <UIWebViewDelegate, CNContactPickerDelegate>
 
@@ -21,8 +23,6 @@
 
 UIWebView *webView;
 PongiftBridgeHelper *bridgeHelper;
-//NSString *const rootUrl = @"http://pongift.com:8080";
-NSString *const rootUrlDebug = @"http://192.168.0.137:8080";
 
 #pragma mark - Life Cycle
 
@@ -75,19 +75,18 @@ NSString *const rootUrlDebug = @"http://192.168.0.137:8080";
 // 웹뷰 로드
 - (void)loadWebView {
     
-    NSURL *url = [NSURL URLWithString:rootUrlDebug];
+    NSURL *url = [NSURL URLWithString:RootUrl];
     NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:url];
     
     // 기본 쿠키관리를 설정하지 않음 (수동으로 관리)
     urlRequest.HTTPShouldHandleCookies = false;
     
-    //
-    NSMutableDictionary *cookie = [[NSMutableDictionary alloc] init];
-    [cookie setObject:@"" forKey:@"Cookie"];
+    NSString *cookie = [[PongiftCookieStore sharedInstance] getCookie];
     
-    [urlRequest setValue:@"" forHTTPHeaderField:@"Cookie"];
-    
-    
+    if (cookie != nil) {
+        
+        [urlRequest setValue:cookie forHTTPHeaderField:@"Cookie"];
+    }
     [webView loadRequest:urlRequest];
     
 }
