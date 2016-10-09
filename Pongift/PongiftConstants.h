@@ -59,6 +59,9 @@ extern NSString *const BridgeCallbackAddSearchHistory;
 // 최근검색어 삭제
 extern NSString *const BridgeCallbackRemoveSearchHistory;
 
+// 최근검색어 모두삭제
+extern NSString *const BridgeCallbackRemoveAllSearchHistory;
+
 
 /** 브릿지 ObjC -> JS **/
 

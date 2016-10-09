@@ -18,5 +18,6 @@
 + (id _Nonnull)sharedInstance;
 - (void)addSearchHistory:(PongiftSearchHistory * _Nonnull)searchHistory;
 - (void)removeSearchHistoryAtIndex:(NSInteger)index;
+- (void)removeAllSearchHistory;
 - (NSArray * _Nonnull)getSearchHistories;
 @end

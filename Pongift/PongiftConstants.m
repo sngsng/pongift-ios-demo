@@ -39,6 +39,7 @@ NSString *const BridgeCallbackLogout = @"logout";
 NSString *const BridgeCallbackGetSearchHistories = @"getSearchHistories";
 NSString *const BridgeCallbackAddSearchHistory = @"addSearchHistory";
 NSString *const BridgeCallbackRemoveSearchHistory = @"removeSearchHistory";
+NSString *const BridgeCallbackRemoveAllSearchHistory = @"removeAllSearchHistory";
 
 NSString *const BridgeCallerGetContact = @"getContact";
 

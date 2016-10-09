@@ -64,7 +64,14 @@ NSString *filePath = @"searchHistories.out";
     }
 }
 
-
+- (void)removeAllSearchHistory {
+    
+    NSMutableArray *emptyList = [[NSMutableArray alloc] init];
+    if ([self historyExists]) {
+        
+        [NSKeyedArchiver archiveRootObject:emptyList toFile:[self historyFilePath]];
+    }
+}
 
 - (NSArray * _Nonnull)getSearchHistories {
     

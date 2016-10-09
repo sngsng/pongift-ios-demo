@@ -163,6 +163,18 @@
             responseCallback(searchHistoriesJson);
         }
     }];
+    
+    // 최근검색어 모두삭제
+    [_bridge registerHandler:BridgeCallbackRemoveAllSearchHistory handler:^(id data, WVJBResponseCallback responseCallback) {
+       
+        PongiftPersistenceManager *manager = [PongiftPersistenceManager sharedInstance];
+        [manager removeAllSearchHistory];
+        
+        NSArray *searchHistories = [manager getSearchHistories];
+        NSDictionary *searchHistoriesJson = @{kRows : searchHistories};
+        responseCallback(searchHistoriesJson);
+        
+    }];
 }
 
 
