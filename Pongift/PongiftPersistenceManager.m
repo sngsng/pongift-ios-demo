@@ -35,12 +35,12 @@ NSString *filePath = @"searchHistories.out";
         
         NSArray * searchHistories = [self getSearchHistories];
         willUpdateHistories = [searchHistories mutableCopy];
-        [willUpdateHistories addObject:searchHistory.getJson];
+        [willUpdateHistories insertObject:searchHistory.getJson atIndex:0];
         
     }
     else {
         
-        [willUpdateHistories addObject:searchHistory.getJson];
+        [willUpdateHistories insertObject:searchHistory.getJson atIndex:0];
     }
     
     [NSKeyedArchiver archiveRootObject:willUpdateHistories toFile:[self historyFilePath]];
@@ -48,6 +48,7 @@ NSString *filePath = @"searchHistories.out";
 
 - (void)removeSearchHistoryAtIndex:(NSInteger)index {
     
+    NSLog(@"Removed Index : %ld",(long)index);
     NSMutableArray *willUpdateHistories = [[NSMutableArray alloc] init];
     
     if ([self historyExists]) {
@@ -77,7 +78,6 @@ NSString *filePath = @"searchHistories.out";
         if (histories != nil) {
             
             returnHistories = [histories mutableCopy];
-            
         }
     }
     

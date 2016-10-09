@@ -99,13 +99,56 @@ void (^contactPickerCompletion)(CNContact* contact);
                     
                     
                     NSString *name = [contact givenName];
-                    NSString *year = [NSString stringWithFormat:@"%ld",[birthday year]];
+                    NSInteger year = [birthday year];
                     NSInteger month = [birthday month];
                     NSInteger day = [birthday day];
                     
-//                    NSDictionary *json = @{kName:name, kImage:imageString,
-//                                           kBirthYear:year, kBirthMonth:, kBirthDay:day,
-//                                           kPhone:phoneNumberString};
+                    NSDictionary *json = @{kName:name,
+                                           kImage:imageString,
+                                           kBirthYear:[NSString stringWithFormat:@"%ld",(long)year], kBirthMonth:[NSString stringWithFormat:@"%ld",(long)month], kBirthDay:[NSString stringWithFormat:@"%ld",(long)day],
+                                           kPhone:phoneNumberString};
+                    
+                    switch (month) {
+                        case 1:
+                            [january addObject:json];
+                            break;
+                        case 2:
+                            [february addObject:json];
+                            break;
+                        case 3:
+                            [march addObject:json];
+                            break;
+                        case 4:
+                            [april addObject:json];
+                            break;
+                        case 5:
+                            [may addObject:json];
+                            break;
+                        case 6:
+                            [june addObject:json];
+                            break;
+                        case 7:
+                            [july addObject:json];
+                            break;
+                        case 8:
+                            [august addObject:json];
+                            break;
+                        case 9:
+                            [september addObject:json];
+                            break;
+                        case 10:
+                            [october addObject:json];
+                            break;
+                        case 11:
+                            [november addObject:json];
+                            break;
+                        case 12:
+                            [december addObject:json];
+                            break;
+                            
+                        default:
+                            break;
+                    }
                     
                     
                 }
