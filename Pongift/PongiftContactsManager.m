@@ -46,9 +46,8 @@ void (^contactPickerCompletion)(CNContact* contact);
 }
 
 // 연락처 리스트
-- (void) fetchBirthDayContactsWithController:(UIViewController *)controller andCompletion:(void(^)(NSMutableArray* contacts))completion {
+- (void) fetchBirthDayContactsWithController:(UIViewController *)controller andCompletion:(void(^)(NSDictionary* contacts))completion {
     
-    NSMutableArray *contacts = [[NSMutableArray alloc] init];
     NSMutableArray *january = [[NSMutableArray alloc] init];
     NSMutableArray *february = [[NSMutableArray alloc] init];
     NSMutableArray *march = [[NSMutableArray alloc] init];
@@ -85,7 +84,7 @@ void (^contactPickerCompletion)(CNContact* contact);
                     
                     if (thumbImageData != nil) {
                         
-                        imageString = [[NSString alloc] initWithData:thumbImageData encoding:NSUTF8StringEncoding];
+                        imageString = [thumbImageData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
                     }
                     
                     if ([phoneNumbers count] != 0) {
@@ -149,25 +148,84 @@ void (^contactPickerCompletion)(CNContact* contact);
                         default:
                             break;
                     }
-                    
-                    
                 }
-
-                
-                
-                
-                
-                
-                NSMutableDictionary *json = [[NSMutableDictionary alloc] init];
-//                [json setValue:name forKey:@"name"];
-//                [json setValue:phoneNumberString forKey:@"phoneNumber"];
-                
-                [contacts addObject:json];
-                
-                NSLog(@"이름 : %@, 이미지: %@, 휴대폰번호 :%@, 생일 : %@ ", [contact givenName], [contact thumbnailImageData], [contact phoneNumbers], [contact birthday]);
             }];
             
-            completion(contacts);
+            NSComparisonResult (^comparator)(NSDictionary* first, NSDictionary* second) = ^NSComparisonResult(NSDictionary* first, NSDictionary* second) {
+                
+                
+                NSString * dayFirst = [first objectForKey:kBirthDay];
+                NSString * daySecond = [second objectForKey:kBirthDay];
+                
+                return [dayFirst compare:daySecond];
+            };
+            
+            if (january.count > 0) {
+                
+                [january sortUsingComparator:comparator];
+            }
+            if (february.count > 0) {
+                
+                [february sortUsingComparator:comparator];
+            }
+            if (march.count > 0) {
+                
+                [march sortUsingComparator:comparator];
+            }
+            if (april.count > 0) {
+                
+                [april sortUsingComparator:comparator];
+            }
+            if (may.count > 0) {
+                
+                [may sortUsingComparator:comparator];
+            }
+            if (june.count > 0) {
+                
+                [june sortUsingComparator:comparator];
+            }
+            if (july.count > 0) {
+                
+                [july sortUsingComparator:comparator];
+            }
+            if (august.count > 0) {
+                
+                [august sortUsingComparator:comparator];
+            }
+            if (september.count > 0) {
+                
+                [september sortUsingComparator:comparator];
+            }
+            if (october.count > 0) {
+                
+                [october sortUsingComparator:comparator];
+            }
+            if (november.count > 0) {
+                
+                [november sortUsingComparator:comparator];
+            }
+            if (december.count > 0) {
+                
+                [december sortUsingComparator:comparator];
+            }
+            
+            NSDictionary *returnJson = @{
+                                         @"1":january,
+                                         @"2":february,
+                                         @"3":march,
+                                         @"4":april,
+                                         @"5":may,
+                                         @"6":june,
+                                         @"7":july,
+                                         @"8":august,
+                                         @"9":september,
+                                         @"10":october,
+                                         @"11":november,
+                                         @"12":december
+                                         };
+
+            
+            completion(returnJson);
             
             
         }

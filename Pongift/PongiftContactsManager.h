@@ -14,7 +14,7 @@
 @interface PongiftContactsManager : NSObject
 
 + (id)sharedManager;
-- (void)fetchBirthDayContactsWithController:(UIViewController *)controller andCompletion:(void(^)(NSMutableArray* contacts))completion;
+- (void)fetchBirthDayContactsWithController:(UIViewController *)controller andCompletion:(void(^)(NSDictionary* contacts))completion;
 - (void)openContactsWithController:(UIViewController *) controller completion:(void(^)(CNContact* contact))pickerCompletion;
 
 @end

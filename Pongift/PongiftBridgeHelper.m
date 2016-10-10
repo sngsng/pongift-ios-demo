@@ -70,7 +70,7 @@
     [_bridge registerHandler:BridgeCallbackGetContacts handler:^(id data, WVJBResponseCallback responseCallback) {
         
         PongiftContactsManager *contactsManager = [PongiftContactsManager sharedManager];
-        [contactsManager fetchBirthDayContactsWithController:_controller andCompletion:^(NSMutableArray *contacts) {
+        [contactsManager fetchBirthDayContactsWithController:_controller andCompletion:^(NSDictionary *contacts) {
             
             NSLog(@"%@", contacts);
             responseCallback(contacts);

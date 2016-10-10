@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "PongiftAgent.h"
 #import "PongiftPersistenceManager.h"
+#import "PongiftContactsManager.h"
 
 @interface ViewController ()
 
@@ -19,6 +20,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //    self.view.backgroundColor = [UIColor blackColor];
+    
+    PongiftContactsManager *contactsManager = [PongiftContactsManager sharedManager];
+    [contactsManager fetchBirthDayContactsWithController:self andCompletion:^(NSDictionary *contacts) {
+        
+        NSLog(@"%@", contacts);
+    }];
     
     
     
@@ -31,7 +38,7 @@
     
 }
 - (IBAction)pushOpenPongiftAgent:(id)sender {
-
+    
     
     
     PongiftAgent *agent = [PongiftAgent sharedInstance];
