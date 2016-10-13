@@ -42,6 +42,7 @@ NSString *const LocalNotiTitleFormat = @"오늘은 %@님의 생일입니다.";
 NSString *const BridgeCallbackGetContacts = @"getContacts";
 NSString *const BridgeCallbackOpenContanctUI = @"openContactsUI";
 NSString *const BridgeCallbackGetServiceId = @"getServiceId";
+NSString *const BridgeCallbackGetContact = @"getContact";
 NSString *const BridgeCallbackCloseWebView = @"closeWebView";
 NSString *const BridgeCallbackRefreshWebView = @"refreshWebView";
 NSString *const BridgeCallbackLogout = @"logout";
@@ -50,8 +51,12 @@ NSString *const BridgeCallbackAddSearchHistory = @"addSearchHistory";
 NSString *const BridgeCallbackRemoveSearchHistory = @"removeSearchHistory";
 NSString *const BridgeCallbackRemoveAllSearchHistory = @"removeAllSearchHistory";
 NSString *const BridgeCallbackGetNotificationSettings = @"getNotificationSettings";
-NSString *const BridgeCallbackUpdateNotificationSettings = @"updateNotificationSettings";
 
-NSString *const BridgeCallerGetContact = @"getContact";
+
+NSString *const BridgeCallbackUpdateEtcAlarmOnSettings = @"updateEtcAlarmOnSettings";
+NSString *const BridgeCallbackUpdateMemorialDayAlarmSettings = @"updateMemorialDayAlarmSettings";
+NSString *const BridgeCallbackUpdateMemorialDayAlarmOnSettings = @"updateMemorialDayAlarmOnSettings";
+
+NSString *const BridgeCallerSetContact = @"setContact";
 
 @end

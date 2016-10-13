@@ -51,6 +51,9 @@ extern NSString *const BridgeCallbackOpenContanctUI;
 // 서비스 아이디 리턴
 extern NSString *const BridgeCallbackGetServiceId;
 
+// 선택된 연락처 리턴
+extern NSString *const BridgeCallbackGetContact;
+
 // 웹뷰 닫기
 extern NSString *const BridgeCallbackCloseWebView;
 
@@ -76,12 +79,14 @@ extern NSString *const BridgeCallbackRemoveAllSearchHistory;
 extern NSString *const BridgeCallbackGetNotificationSettings;
 
 // 알림설정 수정
-extern NSString *const BridgeCallbackUpdateNotificationSettings;
+extern NSString *const BridgeCallbackUpdateEtcAlarmOnSettings;
+extern NSString *const BridgeCallbackUpdateMemorialDayAlarmSettings;
+extern NSString *const BridgeCallbackUpdateMemorialDayAlarmOnSettings;
 
 
 /** 브릿지 ObjC -> JS **/
 
-// 연락처 UI에서 선택된 연락처 리턴
-extern NSString *const BridgeCallerGetContact;
+// 연락처 UI에서 선택된 연락처 세팅 완료알림
+extern NSString *const BridgeCallerSetContact;
 
 @end
