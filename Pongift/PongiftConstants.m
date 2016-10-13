@@ -30,8 +30,8 @@ NSString *const kBirthMonth = @"month";
 NSString *const kBirthDay = @"day";
 
 NSString *const kEtcAlarmOn = @"etcAlarmOn";
-NSString *const kMemorialAlarmOn = @"memorialAlarmOn";
-NSString *const kMemorialAlarm = @"memorialAlarm";
+NSString *const kMemorialAlarmOn = @"memorialDayAlarmOn";
+NSString *const kMemorialAlarm = @"memorialDayAlarm";
 NSString *const kOne = @"one";
 NSString *const kTwo = @"two";
 NSString *const kThree = @"three";
