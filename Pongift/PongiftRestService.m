@@ -28,6 +28,7 @@ AFHTTPSessionManager *manager;
         
         if (cookie != nil) {
             
+            NSLog(@"보낸 쿠키 : %@", cookie);
             [[manager requestSerializer] setValue:cookie forHTTPHeaderField:@"cookie"];
         }
     }
@@ -66,6 +67,7 @@ AFHTTPSessionManager *manager;
         
         if (cookie != nil) {
             
+            NSLog(@"받은 쿠키 : %@", cookie);
             [[PongiftCookieStore sharedInstance] saveCookie:cookie];
         }
         

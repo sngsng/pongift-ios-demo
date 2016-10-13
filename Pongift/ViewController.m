@@ -19,16 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //    self.view.backgroundColor = [UIColor blackColor];
-    
-    PongiftContactsManager *contactsManager = [PongiftContactsManager sharedManager];
-    [contactsManager fetchBirthDayContactsWithController:self andCompletion:^(NSDictionary *contacts) {
-        
-        NSLog(@"%@", contacts);
-    }];
-    
-    
-    
+
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {

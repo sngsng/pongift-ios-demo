@@ -13,6 +13,7 @@
 #import "PongiftContactsManager.h"
 #import "PongiftConstants.h"
 #import "PongiftCookieStore.h"
+#import "PongiftUtils.h"
 
 @interface PongiftViewController () <UIWebViewDelegate, CNContactPickerDelegate>
 
@@ -30,11 +31,15 @@ PongiftBridgeHelper *bridgeHelper;
     
     [super viewDidLoad];
     
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    [self scheduleLocalNotification];
     [self addWebView];
     [self setUpBridge];
     [self loadWebView];
     
 }
+
+
 
 - (void) loadView{
     
@@ -89,6 +94,71 @@ PongiftBridgeHelper *bridgeHelper;
     }
     [webView loadRequest:urlRequest];
     
+}
+
+- (void)scheduleLocalNotification {
+    
+    UIUserNotificationType notificationTypes = (UIUserNotificationTypeAlert | UIUserNotificationTypeSound);
+    UIUserNotificationSettings *notificationSettings = [UIUserNotificationSettings settingsForTypes:notificationTypes categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:notificationSettings];
+    
+    [[PongiftContactsManager sharedManager] fetchBirthDayContactsWithController:self andCompletion:^(NSDictionary *contacts) {
+       
+        NSDateComponents *todayDateComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
+        
+        NSInteger curYear = [todayDateComponents year];
+        NSInteger curMonth = [todayDateComponents month];
+        NSInteger curDay = [todayDateComponents day];
+        
+        for (int i = 1; i <= 12; i++) {
+            
+            NSArray *targetBirthMonth = [contacts objectForKey:[NSString stringWithFormat:@"%d",i]];
+            
+            for (int j = 0; j < targetBirthMonth.count; j++) {
+                
+                NSDictionary *birthDay = targetBirthMonth[j];
+                
+                NSString *targetName = [birthDay objectForKey:kName];
+                NSInteger targetMonth = [[birthDay objectForKey:kBirthMonth] integerValue];
+                NSInteger targetDay = [[birthDay objectForKey:kBirthDay] integerValue];
+                
+                if (targetMonth >= curMonth && targetDay >= curDay) {
+                    
+                    NSDateComponents *firedDateComponents  =[[NSDateComponents alloc] init];
+                    [firedDateComponents setDay:targetDay];
+                    [firedDateComponents setMonth: targetMonth];
+                    [firedDateComponents setYear: curYear];
+                    [firedDateComponents setHour:15];
+                    [firedDateComponents setMinute:j];
+                    
+                    NSCalendar *calendar = [[ NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+                    NSDate *dateOfBirth = [calendar dateFromComponents:firedDateComponents];
+                    
+                    UILocalNotification *localNoti = [self makeLocationNotificationWithName:targetName andFireDate:dateOfBirth];
+                    
+                    [[UIApplication sharedApplication] scheduleLocalNotification:localNoti];
+                    
+                }
+            }
+        }
+    }];
+}
+
+
+- (UILocalNotification *)makeLocationNotificationWithName:(NSString*)name andFireDate:(NSDate*)date{
+    
+    UILocalNotification *localNoti = [[UILocalNotification alloc] init];
+    localNoti.alertBody = [NSString stringWithFormat:LocalNotiTitleFormat, name];
+    localNoti.fireDate = date;
+    
+    return localNoti;
+}
+
+#pragma mark - UIWebView delegate
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+    
+    [PongiftUtils showAlertWithMsg:[error localizedDescription] controller:self];
 }
 
 

@@ -29,8 +29,18 @@ extern NSString *const kBirthYear;
 extern NSString *const kBirthMonth;
 extern NSString *const kBirthDay;
 
-/** 브릿지 JS -> Obj Call 함수명 **/
+extern NSString *const kEtcAlarmOn;
+extern NSString *const kMemorialAlarmOn;
+extern NSString *const kMemorialAlarm;
+extern NSString *const kOne;
+extern NSString *const kTwo;
+extern NSString *const kThree;
+extern NSString *const kToday;
 
+/** Messages **/
+extern NSString *const LocalNotiTitleFormat;
+
+/** 브릿지 JS -> Obj Call 함수명 **/
 
 // 연락처 리스트 리턴
 extern NSString *const BridgeCallbackGetContacts;
@@ -61,6 +71,12 @@ extern NSString *const BridgeCallbackRemoveSearchHistory;
 
 // 최근검색어 모두삭제
 extern NSString *const BridgeCallbackRemoveAllSearchHistory;
+
+// 알림설정 조회
+extern NSString *const BridgeCallbackGetNotificationSettings;
+
+// 알림설정 수정
+extern NSString *const BridgeCallbackUpdateNotificationSettings;
 
 
 /** 브릿지 ObjC -> JS **/

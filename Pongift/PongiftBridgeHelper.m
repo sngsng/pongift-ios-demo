@@ -175,6 +175,30 @@
         responseCallback(searchHistoriesJson);
         
     }];
+    
+    // 알림설정 조회
+    [_bridge registerHandler:BridgeCallbackGetNotificationSettings handler:^(id data, WVJBResponseCallback responseCallback) {
+       
+        PongiftPersistenceManager *manager = [PongiftPersistenceManager sharedInstance];
+        
+        NSDictionary *settingsJson = [manager getNotificationSettings];
+        responseCallback(settingsJson);
+    }];
+    
+    // 알림설정 수정
+    [_bridge registerHandler:BridgeCallbackUpdateNotificationSettings handler:^(id data, WVJBResponseCallback responseCallback) {
+        
+       
+        if ([data isKindOfClass:[NSDictionary class]]) {
+            
+            NSDictionary *updatedSettings = (NSDictionary*)data;
+            PongiftPersistenceManager *manager = [PongiftPersistenceManager sharedInstance];
+            [manager updateNotificationSettings:updatedSettings];
+            
+            responseCallback(updatedSettings);
+            
+        }
+    }];
 }
 
 
