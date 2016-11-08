@@ -18,5 +18,5 @@
 + (NSString *_Nonnull)memorialLocalNotificationMsgFromBirthDays:(NSArray* _Nonnull)birthdays;
 
 + (NSBundle *_Nonnull)frameworkBundle;
-+(void) Log:(NSString*) format, ...;
++(void) Log:(NSString* _Nonnull) format, ...;
 @end
