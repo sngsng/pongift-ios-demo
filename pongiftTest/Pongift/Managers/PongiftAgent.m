@@ -144,7 +144,7 @@
 
 - (void)showPongiftMemorialPushPopUp:(UILocalNotification*)push {
     
-    //if (push.category!= nil && [push.category isEqualToString:kLocalNotificationCategory]) {
+//    if (push.category!= nil && [push.category isEqualToString:kLocalNotificationCategory]) {
     
     
         PongiftMemorialPushPopUpViewController *pushPopUpVC = [[PongiftMemorialPushPopUpViewController alloc] initWithNibName:@"PongiftMemorialPushPopUpViewController" bundle:[PongiftUtils frameworkBundle]];
@@ -157,6 +157,6 @@
         
         if (topVC != nil) [topVC presentViewController:pushPopUpVC animated:true completion:nil];
         
-    //}
+//    }
 }
 @end

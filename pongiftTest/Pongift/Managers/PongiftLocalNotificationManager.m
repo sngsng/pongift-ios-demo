@@ -68,12 +68,17 @@
                     
                     [PongiftUtils Log:@"contacts : %@", contacts];
                     
-                    NSDateComponents *todayDateComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
+                    NSDateComponents *todayDateComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear | NSCalendarUnitHour | NSCalendarUnitMinute fromDate:[NSDate date]];
                     [todayDateComponents setTimeZone:[NSTimeZone timeZoneWithName:@"Asia/Seoul"]];
                     
                     NSInteger curYear = [todayDateComponents year];
                     NSInteger curMonth = [todayDateComponents month];
                     NSInteger curDay = [todayDateComponents day];
+                    NSInteger curHour = [todayDateComponents hour];
+                    NSInteger curMin = [todayDateComponents minute];
+                    
+                    NSInteger targetHour = 18;
+                    NSInteger targetMin = 25;
                     
                     for (int i = 1; i <= 12; i++) {
                         
@@ -81,7 +86,7 @@
                         NSArray *targetBirthMonthList = [contacts objectForKey:[NSString stringWithFormat:@"%d",i]];
                         NSArray *groupedList = [PongiftUtils groupBirthDaysFromTargetMonthBirthDayList:targetBirthMonthList];
                         
-                    
+                        
                         for (int j = 0; j < groupedList.count; j++) {
                             
                             NSArray *birthDays = groupedList[j];
@@ -92,15 +97,16 @@
                                 NSInteger dateOffset = [persistenceManager getNotificationFiredDayOffset];
                                 NSInteger targetDay = [[birthDay objectForKey:kBirthDay] integerValue] - dateOffset;
                                 
-                                if (month >= curMonth && targetDay >= curDay) {
+                                
+                                if (month >= curMonth && targetDay >= curDay && targetHour >= curHour && targetMin >= curMin) {
                                     
                                     NSDateComponents *firedDateComponents  =[[NSDateComponents alloc] init];
                                     [firedDateComponents setTimeZone:[NSTimeZone timeZoneWithName:@"Asia/Seoul"]];
                                     [firedDateComponents setDay:targetDay];
                                     [firedDateComponents setMonth: month];
                                     [firedDateComponents setYear: curYear];
-                                    [firedDateComponents setHour:15];
-                                    [firedDateComponents setMinute:j];
+                                    [firedDateComponents setHour:targetHour];
+                                    [firedDateComponents setMinute:targetMin];
                                     
                                     [PongiftUtils Log:@"firedDate : %@", firedDateComponents];
                                     
@@ -112,10 +118,7 @@
                                     [[UIApplication sharedApplication] scheduleLocalNotification:localNoti];
                                 }
                             }
-                            
-                            
                         }
-                        
                     }
                 }];
                 
@@ -124,9 +127,9 @@
                 
                 [self cancelScheduledMemorialNotifications];
             }
-
-            }
             
+        }
+        
     }
 }
 
