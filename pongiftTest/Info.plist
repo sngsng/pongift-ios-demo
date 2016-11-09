@@ -2,6 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>citispay</string>
+		<string>citicardappkr</string>
+		<string>ispmobile</string>
+		<string>kb-acp</string>
+		<string>lottesmartpay</string>
+		<string>lotteappcard</string>
+		<string>nhappcardansimclick</string>
+		<string>nonghyupcardansimclick</string>
+		<string>scardcertiapp</string>
+		<string>cloudpay</string>
+		<string>mpocket.online.ansimclick</string>
+		<string>smhyundaiansimclick</string>
+		<string>hdcardappcardansimclick</string>
+		<string>smshinhanansimclick</string>
+		<string>shinhan-sr-ansimclick</string>
+		<string>payco</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
