@@ -155,8 +155,8 @@ void (^contactEditCompletion)(CNContact* contact);
             NSComparisonResult (^comparator)(NSDictionary* first, NSDictionary* second) = ^NSComparisonResult(NSDictionary* first, NSDictionary* second) {
                 
                 
-                NSString * dayFirst = [first objectForKey:kBirthDay];
-                NSString * daySecond = [second objectForKey:kBirthDay];
+                NSNumber *dayFirst = [NSNumber numberWithInteger:[[first objectForKey:kBirthDay] integerValue]];
+                NSNumber *daySecond = [NSNumber numberWithInteger:[[second objectForKey:kBirthDay] integerValue]];
                 
                 return [dayFirst compare:daySecond];
             };
