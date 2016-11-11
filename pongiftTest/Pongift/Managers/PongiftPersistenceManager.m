@@ -133,8 +133,10 @@ NSString *settingsFile = @"pongiftNotificationSettings.out";
     
     if (memorialAlarmOn) {
         
-        [[PongiftLocalNotificationManager sharedInstance] cancelScheduledMemorialNotifications];
-        [[PongiftLocalNotificationManager sharedInstance] scheduleMemorialNotifications];
+        PongiftLocalNotificationManager *notiManager = [PongiftLocalNotificationManager sharedInstance];
+        
+        [notiManager cancelScheduledMemorialNotifications];
+        [notiManager scheduleMemorialNotificationsWithHour:[notiManager notiFiredHour] andMin:[notiManager notiFiredMin]];
     }
     else {
         

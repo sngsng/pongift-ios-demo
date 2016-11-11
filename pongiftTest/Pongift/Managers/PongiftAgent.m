@@ -71,7 +71,7 @@
     if (isLocalNotificationOn && isContactsAccessOn) {
         
         [notificationManager cancelScheduledMemorialNotifications];
-        [notificationManager scheduleMemorialNotifications];
+        [notificationManager scheduleMemorialNotificationsWithHour:[notificationManager notiFiredHour] andMin:[notificationManager notiFiredMin]];
     }
     else {
         

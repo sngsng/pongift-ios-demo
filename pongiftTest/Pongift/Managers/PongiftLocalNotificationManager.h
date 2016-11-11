@@ -12,7 +12,11 @@
 
 + (PongiftLocalNotificationManager* _Nonnull)sharedInstance;
 
-- (void)scheduleMemorialNotifications;
+
+@property (assign, nonatomic) NSInteger notiFiredHour;
+@property (assign, nonatomic) NSInteger notiFiredMin;
+
+- (void)scheduleMemorialNotificationsWithHour:(NSInteger)hour andMin:(NSInteger)min;
 - (void)cancelScheduledMemorialNotifications;
 - (void)registerLocalNotificationSettings;
 - (BOOL)isLocalNotificationEnabled;

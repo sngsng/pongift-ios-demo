@@ -48,7 +48,7 @@
     return isNotificationEnabled;
 }
 
-- (void)scheduleMemorialNotifications {
+- (void)scheduleMemorialNotificationsWithHour:(NSInteger)hour andMin:(NSInteger)min {
     
     // 로컬 푸시 알림 허용
     if ([self isLocalNotificationEnabled]) {
@@ -77,8 +77,8 @@
                     NSInteger curHour = [todayDateComponents hour];
                     NSInteger curMin = [todayDateComponents minute];
                     
-                    NSInteger targetHour = 18;
-                    NSInteger targetMin = 25;
+                    NSInteger targetHour = hour;
+                    NSInteger targetMin = min;
                     
                     for (int i = 1; i <= 12; i++) {
                         
