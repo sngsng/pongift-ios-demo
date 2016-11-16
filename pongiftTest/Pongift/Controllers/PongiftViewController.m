@@ -98,6 +98,9 @@ PongiftBridgeHelper *bridgeHelper;
 - (void)loadWebView {
     
     NSURL *url = [NSURL URLWithString:RootUrl];
+    NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    [cookieStorage setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
+
     NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:url];
     
     // 기본 쿠키관리를 설정하지 않음 (수동으로 관리)
@@ -120,6 +123,62 @@ PongiftBridgeHelper *bridgeHelper;
         
         [self dismissViewControllerAnimated:true completion:nil];
     }];
+}
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+    NSURL *url = request.URL;
+    NSString *eventStr = url.absoluteString;
+    
+    
+    if([eventStr rangeOfString:@"ansimclick.hyundaicard.com"].location != NSNotFound)
+    {
+        return YES;
+    }
+    else
+    {
+        if([eventStr rangeOfString:@"http://itunes.apple.com"].location != NSNotFound)
+        {
+            [[UIApplication sharedApplication] openURL:[request URL]];
+            return NO;
+        }
+    }
+    
+    if([eventStr rangeOfString:@"ansimclick"].location != NSNotFound)
+    {
+        [[UIApplication sharedApplication] openURL:[request URL]];
+        return NO;
+    }
+    
+    if([eventStr isEqualToString:@"itms-appss://itunes.apple.com/kr/app/id369125087?mt=8"] || [eventStr isEqualToString:@"itms-apps://itunes.apple.com/kr/app/id369125087?mt=8"])
+    {
+        [[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"http://itunes.apple.com/kr/app/mobail-anjeongyeolje-isp/id369125087?mt=8"]];
+    }
+    
+    if([eventStr isEqualToString:@"itms-appss://itunes.apple.com/us/app/paypin-peipin/id490896496?ls=1&mt=8"] || [eventStr isEqualToString:@"itms-apps://itunes.apple.com/us/app/paypin-peipin/id490896496?ls=1&mt=8"])
+    {
+        [[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"http://itunes.apple.com/us/app/paypin-peipin/id490896496?ls=1&mt=8"]];
+    }
+    
+    NSArray *arr_ISP_info = [eventStr componentsSeparatedByString:@"ispmobile://TID="];
+    
+    if( [arr_ISP_info count] == 2 )
+    {
+        NSArray *arr_ISP_info_2 = [[arr_ISP_info objectAtIndex:1] componentsSeparatedByString:@","];
+        
+        if([arr_ISP_info_2 count]==2)
+        {
+            NSURL *appUrl=[NSURL URLWithString:[NSString stringWithFormat:@"ispmobile://TID=%@",[arr_ISP_info objectAtIndex:1]]];
+            
+            BOOL installedApp=[[UIApplication sharedApplication]openURL:appUrl];
+            
+            if(installedApp==0)
+            {
+                [[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"http://itunes.apple.com/kr/app/mobail-anjeongyeolje-isp/id369125087?mt=8"]];
+            }
+        }
+    }
+    
+    return YES;
 }
 
 

@@ -98,7 +98,7 @@
                                 NSInteger targetDay = [[birthDay objectForKey:kBirthDay] integerValue] - dateOffset;
                                 
                                 
-                                if (month >= curMonth && targetDay >= curDay && targetHour >= curHour && targetMin >= curMin) {
+                                if ([self isFutureDateWithMonth:month day:targetDay hour:hour min:min]) {
                                     
                                     NSDateComponents *firedDateComponents  =[[NSDateComponents alloc] init];
                                     [firedDateComponents setTimeZone:[NSTimeZone timeZoneWithName:@"Asia/Seoul"]];
@@ -130,6 +130,27 @@
             
         }
         
+    }
+}
+
+- (BOOL)isFutureDateWithMonth:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour min:(NSInteger) min {
+    
+    NSDateComponents *todayDateComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear | NSCalendarUnitHour | NSCalendarUnitMinute fromDate:[NSDate date]];
+    [todayDateComponents setTimeZone:[NSTimeZone timeZoneWithName:@"Asia/Seoul"]];
+    
+    NSInteger curMonth = [todayDateComponents month];
+    NSInteger curDay = [todayDateComponents day];
+    NSInteger curHour = [todayDateComponents hour];
+    NSInteger curMin = [todayDateComponents minute];
+    
+    if (month >= curMonth && day >= curDay && hour >= curHour) {
+        
+        if (hour == curHour) return min >= curMin;
+        else return YES;
+    }
+    else {
+        
+        return NO;
     }
 }
 

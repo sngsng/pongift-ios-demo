@@ -50,6 +50,7 @@ NSString *selectedPhoneNum = @"";
     // 웹뷰 종료
     [_bridge registerHandler:BridgeCallbackCloseWebView handler:^(id data, WVJBResponseCallback responseCallback) {
         
+        [PongiftUtils Log:@"closeWebView called"];
         dispatch_async(dispatch_get_main_queue(), ^{
             
             [_controller dismissViewControllerAnimated:true completion:nil];
