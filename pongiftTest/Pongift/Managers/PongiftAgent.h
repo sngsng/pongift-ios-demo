@@ -14,9 +14,12 @@
 @property (assign, nonatomic) BOOL localNotificationEnabled;
 @property (assign, nonatomic) BOOL contactAccessEnabled;
 @property (assign, nonatomic) BOOL debugMode;
+@property (strong, nonatomic) NSString *accessKey;
+@property (strong, nonatomic) NSString *secretKey;
+@property (strong, nonatomic) NSString *appUrlScheme;
 
 +(PongiftAgent*)sharedInstance;
-- (void)initializePongiftWithSecretKey:(NSString*)secretKey andAccessKey:(NSString*)accessKey completion:(void(^)(bool completion)) completion;
+- (void)initializePongiftWithCompletion:(void(^)(bool completion)) completion;
 - (void)openPongiftViewController:(UIViewController*)controller;
 - (void)requestAccessPermissions;
 - (void)schedulePongiftMemorialDayNotifications;

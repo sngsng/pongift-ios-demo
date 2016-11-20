@@ -11,6 +11,7 @@
 @implementation PongiftConstants
 
 NSString *const RootUrl = @"http://pongift.com:8080";
+NSString *const BirthDayDeepLinkUrl = @"http://pongift.com:8080/theme?themeId=1&phone=";
 //NSString *const RootUrl = @"http://192.168.0.138:8080";
 NSString *const SerivceInitializeUrl = @"/api/pongift/sdk-initial?";
 NSString *const ServiceInitializeQuerySecretKey = @"secretKey=";

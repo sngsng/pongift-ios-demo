@@ -80,9 +80,18 @@
 }
 
 
-- (void)initializePongiftWithSecretKey:(NSString*)secretKey andAccessKey:(NSString*)accessKey completion:(void(^)(bool completion)) completion {
+- (void)initializePongiftWithCompletion:(void(^)(bool completion)) completion {
     
-    [self requestSecretKey:secretKey andAccessKey:accessKey completion:completion];
+    if (_secretKey != nil && _accessKey != nil) {
+        
+        [self requestSecretKey:_secretKey andAccessKey:_accessKey completion:completion];
+    }
+    else {
+        
+        NSLog(@"Error: accessKey, secretKey nil");
+        completion(NO);
+    }
+    
     
 }
 
@@ -90,12 +99,25 @@
     
     if ([[PongiftPersistenceManager sharedInstance] serviceId] != nil) {
         
-        PongiftViewController *pongiftVC = [[PongiftViewController alloc] init];
-        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:pongiftVC];
+        [self initializePongiftWithCompletion:^(bool completion) {
+           
+            if (completion) {
+                
+                PongiftViewController *pongiftVC = [[PongiftViewController alloc] init];
+                UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:pongiftVC];
+                
+                [controller presentViewController:navigationController animated:true completion:nil];
+            }
+            else {
+                
+                NSLog(@"Error: Invalid accessKey, secretKey");
+            }
+        }];
         
-        [controller presentViewController:navigationController animated:true completion:nil];
+        
     }
     else {
+        
         
         [PongiftUtils showAlertWithMsg:@"Invalid AccessKey, SecretKey" controller:controller];
     }

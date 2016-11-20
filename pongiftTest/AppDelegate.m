@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-
+    
     PongiftAgent *agent = [PongiftAgent sharedInstance];
     agent.debugMode = true;
     
@@ -27,13 +27,10 @@
     [agent requestAccessPermissions];
     
     // 폰기프트 SDK를 사용하기 위한 초기 설정입니다. (필수)
-    NSString *accessKey = @"j8NtyUuoubAfGShaRQF2MA==";
-    NSString *secretKey = @"bD3QeKX2rhUcSVlubuy2Dg==";
-    [agent initializePongiftWithSecretKey:secretKey andAccessKey:accessKey completion:^(bool completion) {
+    [agent setAccessKey:@"j8NtyUuoubAfGShaRQF2MA=="];
+    [agent setSecretKey:@"bD3QeKX2rhUcSVlubuy2Dg=="];
+    [agent initializePongiftWithCompletion:^(bool completion) {
         
-        if (completion) {
-            
-        }
     }];
     
     return YES;

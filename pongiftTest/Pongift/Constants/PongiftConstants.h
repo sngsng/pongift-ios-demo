@@ -12,6 +12,7 @@
 
 /** Network **/
 extern NSString *const RootUrl;
+extern NSString *const BirthDayDeepLinkUrl;
 extern NSString *const SerivceInitializeUrl;
 extern NSString *const ServiceInitializeQuerySecretKey;
 extern NSString *const ServiceInitializeQueryAccessKey;
