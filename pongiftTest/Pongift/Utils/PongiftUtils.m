@@ -211,13 +211,9 @@
 
 + (NSBundle *_Nonnull)frameworkBundle {
     
-    if ([PongiftAgent sharedInstance].debugMode) {
-        
-        return [NSBundle mainBundle];
-    }
-    else {
+    
         return [NSBundle bundleWithIdentifier:@"com.platfos.pongiftSDK"];
-    }
+    
 }
 
 +(void) Log:(NSString*) format, ... {

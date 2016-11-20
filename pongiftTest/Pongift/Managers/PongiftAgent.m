@@ -166,10 +166,12 @@
 
 - (void)showPongiftMemorialPushPopUp:(UILocalNotification*)push {
     
-//    if (push.category!= nil && [push.category isEqualToString:kLocalNotificationCategory]) {
-    
+    if (push.category!= nil && [push.category isEqualToString:kLocalNotificationCategory]) {
     
         PongiftMemorialPushPopUpViewController *pushPopUpVC = [[PongiftMemorialPushPopUpViewController alloc] initWithNibName:@"PongiftMemorialPushPopUpViewController" bundle:[PongiftUtils frameworkBundle]];
+    
+        if (pushPopUpVC == nil) pushPopUpVC = [[PongiftMemorialPushPopUpViewController alloc] initWithNibName:@"PongiftMemorialPushPopUpViewController" bundle:[NSBundle mainBundle]];
+    
         [pushPopUpVC setModalPresentationStyle:UIModalPresentationOverFullScreen];
         pushPopUpVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
         pushPopUpVC.notification = push;
@@ -179,6 +181,6 @@
         
         if (topVC != nil) [topVC presentViewController:pushPopUpVC animated:true completion:nil];
         
-//    }
+    }
 }
 @end

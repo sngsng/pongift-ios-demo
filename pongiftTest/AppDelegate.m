@@ -31,6 +31,10 @@
     [agent setSecretKey:@"bD3QeKX2rhUcSVlubuy2Dg=="];
     [agent initializePongiftWithCompletion:^(bool completion) {
         
+        if (completion) {
+            
+            NSLog(@"Initalize success");
+        }
     }];
     
     return YES;

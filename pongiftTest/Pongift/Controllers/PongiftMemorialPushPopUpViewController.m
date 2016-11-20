@@ -102,7 +102,9 @@ CGFloat const cellHeight = 132.0f;
         }
     }
     
-    [_tableView registerNib:[UINib nibWithNibName:cellNibName bundle:[PongiftUtils frameworkBundle]] forCellReuseIdentifier:cellNibName];
+    UINib *cellNib = [UINib nibWithNibName:cellNibName bundle:[PongiftUtils frameworkBundle]];
+    if (cellNib == nil) [UINib nibWithNibName:cellNibName bundle:[NSBundle mainBundle]];
+    [_tableView registerNib:cellNib forCellReuseIdentifier:cellNibName];
 }
 
 #pragma mark - Control Actions
