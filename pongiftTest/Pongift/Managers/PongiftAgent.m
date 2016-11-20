@@ -37,6 +37,7 @@
     
     if (self = [super init]) {
         
+        
         _localNotificationEnabled = YES;
         _contactAccessEnabled = YES;
     }

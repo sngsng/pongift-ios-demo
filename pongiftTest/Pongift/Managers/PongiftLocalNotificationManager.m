@@ -28,6 +28,18 @@
     return instance;
 }
 
+- (id) init {
+    
+    if (self = [super init]) {
+        
+        _notiFiredHour = 16;
+        _notiFiredMin = 0;
+        
+    }
+    
+    return self;
+}
+
 - (void)registerLocalNotificationSettings {
     
     UIUserNotificationType notificationTypes = (UIUserNotificationTypeAlert | UIUserNotificationTypeSound);
