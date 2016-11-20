@@ -72,10 +72,6 @@
                     [todayDateComponents setTimeZone:[NSTimeZone timeZoneWithName:@"Asia/Seoul"]];
                     
                     NSInteger curYear = [todayDateComponents year];
-                    NSInteger curMonth = [todayDateComponents month];
-                    NSInteger curDay = [todayDateComponents day];
-                    NSInteger curHour = [todayDateComponents hour];
-                    NSInteger curMin = [todayDateComponents minute];
                     
                     NSInteger targetHour = hour;
                     NSInteger targetMin = min;

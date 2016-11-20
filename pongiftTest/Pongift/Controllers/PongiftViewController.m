@@ -119,10 +119,14 @@ PongiftBridgeHelper *bridgeHelper;
 #pragma mark - UIWebView delegate
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    [PongiftUtils showAlertWithMsg:[error localizedDescription] controller:self shouldAddSecondButton:NO okActionTitle:@"확인" andOkAction:^{
+    
+    if (error.code != NSURLErrorCancelled) {
         
-        [self dismissViewControllerAnimated:true completion:nil];
-    }];
+        [PongiftUtils showAlertWithMsg:[error localizedDescription] controller:self shouldAddSecondButton:NO okActionTitle:@"확인" andOkAction:^{
+            
+        }];
+    }
+
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
