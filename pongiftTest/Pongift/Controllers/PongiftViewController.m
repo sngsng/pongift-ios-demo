@@ -97,7 +97,10 @@ PongiftBridgeHelper *bridgeHelper;
 // 웹뷰 로드
 - (void)loadWebView {
     
-    NSURL *url = [NSURL URLWithString:RootUrl];
+    NSURL *url;
+    if (_deepLinkUrl != nil) url = [NSURL URLWithString:_deepLinkUrl];
+    else [NSURL URLWithString:RootUrl];
+    
     NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
     [cookieStorage setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
 

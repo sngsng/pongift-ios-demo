@@ -13,6 +13,8 @@
 #import <MessageUI/MessageUI.h>
 #import "PongiftAgent.h"
 #import "PongiftUtils.h"
+#import "PongiftViewController.h"
+#import "PongiftConstants.h"
 
 @interface PongiftMemorialPushPopUpViewController () <UITableViewDelegate, UITableViewDataSource, MFMessageComposeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -111,7 +113,30 @@ CGFloat const cellHeight = 132.0f;
 
 - (void)pushSendGiftButton:(UIButton*)sender {
     
-    [[PongiftAgent sharedInstance] openPongiftViewController:self];
+    if ([[PongiftPersistenceManager sharedInstance] serviceId] != nil) {
+        
+        [[PongiftAgent sharedInstance] initializePongiftWithCompletion:^(bool completion) {
+            
+            if (completion) {
+                
+                NSInteger tag = sender.tag;
+                NSDictionary *birthDay = birthdays[tag];
+                NSString *targetPhone = [birthDay objectForKey:kPhone];
+                
+                PongiftViewController *pongiftVC = [[PongiftViewController alloc] init];
+                pongiftVC.deepLinkUrl = [BirthDayDeepLinkUrl stringByAppendingString:targetPhone];
+                UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:pongiftVC];
+                
+                [self presentViewController:navigationController animated:true completion:nil];
+            }
+            else {
+                
+                NSLog(@"Error: Invalid accessKey, secretKey");
+            }
+        }];
+        
+        
+    }
 }
 
 - (void)pushSendMsgButton:(UIButton*)sender {

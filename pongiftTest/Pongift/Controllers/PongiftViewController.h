@@ -10,4 +10,5 @@
 
 @interface PongiftViewController : UIViewController
 
+@property (strong ,nonatomic) NSString *deepLinkUrl;
 @end
