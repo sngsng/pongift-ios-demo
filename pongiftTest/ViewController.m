@@ -8,9 +8,7 @@
 
 #import "ViewController.h"
 #import "PongiftAgent.h"
-#import "PongiftContactsManager.h"
-#import "PongiftLocalNotificationManager.h"
-#import "PongiftUtils.h"
+
 
 
 
@@ -37,19 +35,19 @@
 
 - (IBAction)pushNotificationTimeSettingsButton:(id)sender {
     
-    NSDate *selectedDate = _datePickerView.date;
-    NSInteger hour = [[NSCalendar currentCalendar] component:NSCalendarUnitHour fromDate:selectedDate];
-    NSInteger min = [[NSCalendar currentCalendar] component:NSCalendarUnitMinute fromDate:selectedDate];
+//    NSDate *selectedDate = _datePickerView.date;
+//    NSInteger hour = [[NSCalendar currentCalendar] component:NSCalendarUnitHour fromDate:selectedDate];
+//    NSInteger min = [[NSCalendar currentCalendar] component:NSCalendarUnitMinute fromDate:selectedDate];
+//    
+//    NSLog(@"datePicker date :%d : %d", hour, min);
+//    
+//    PongiftLocalNotificationManager *manager = [PongiftLocalNotificationManager sharedInstance];
+//    [manager setNotiFiredHour:hour];
+//    [manager setNotiFiredMin:min];
+//    
+//    [[PongiftAgent sharedInstance] schedulePongiftMemorialDayNotifications];
     
-    NSLog(@"datePicker date :%d : %d", hour, min);
-    
-    PongiftLocalNotificationManager *manager = [PongiftLocalNotificationManager sharedInstance];
-    [manager setNotiFiredHour:hour];
-    [manager setNotiFiredMin:min];
-    
-    [[PongiftAgent sharedInstance] schedulePongiftMemorialDayNotifications];
-    
-    [PongiftUtils showAlertWithMsg:[NSString stringWithFormat:@"알림이 등록되었습니다. (%2d시 %2d분)",hour,min] controller:self];
+//    [PongiftUtils showAlertWithMsg:[NSString stringWithFormat:@"알림이 등록되었습니다. (%2d시 %2d분)",hour,min] controller:self];
     
     
     

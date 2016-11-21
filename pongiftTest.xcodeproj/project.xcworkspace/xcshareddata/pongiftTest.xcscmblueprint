@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "FCEFC5D310F7B874D6433D00DE20B8C30A4B8FB2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "FCEFC5D310F7B874D6433D00DE20B8C30A4B8FB2" : 9223372036854775807,
+    "AE926C6205187FDCB77C36914F9F8AAB8B0580BB" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "50DE4E16-6E92-4A13-907A-9AA02CE1A17B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "FCEFC5D310F7B874D6433D00DE20B8C30A4B8FB2" : "pongift-ios-test\/",
+    "AE926C6205187FDCB77C36914F9F8AAB8B0580BB" : "pongift-sdk-ios\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "pongiftTest",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "pongiftTest.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/teamslogup\/pongift-sdk-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AE926C6205187FDCB77C36914F9F8AAB8B0580BB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/sngsng\/pongift-ios-demo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FCEFC5D310F7B874D6433D00DE20B8C30A4B8FB2"
+    }
+  ]
+}

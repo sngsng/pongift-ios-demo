@@ -7,6 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A052D91E1DE2C41400D6F55C /* PongiftAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A052D8CE1DE2C41400D6F55C /* PongiftAssets.xcassets */; };
+		A052D91F1DE2C41400D6F55C /* PongiftConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D8D11DE2C41400D6F55C /* PongiftConstants.m */; };
+		A052D9201DE2C41400D6F55C /* PongiftMemorialPushPopUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D8D41DE2C41400D6F55C /* PongiftMemorialPushPopUpViewController.m */; };
+		A052D9211DE2C41400D6F55C /* PongiftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D8D61DE2C41400D6F55C /* PongiftViewController.m */; };
+		A052D9221DE2C41400D6F55C /* PongiftAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D8D91DE2C41400D6F55C /* PongiftAgent.m */; };
+		A052D9231DE2C41400D6F55C /* PongiftContactsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D8DB1DE2C41400D6F55C /* PongiftContactsManager.m */; };
+		A052D9241DE2C41400D6F55C /* PongiftLocalNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D8DD1DE2C41400D6F55C /* PongiftLocalNotificationManager.m */; };
+		A052D9251DE2C41400D6F55C /* PongiftPersistenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D8DF1DE2C41400D6F55C /* PongiftPersistenceManager.m */; };
+		A052D9261DE2C41400D6F55C /* PongiftSearchHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D8E21DE2C41400D6F55C /* PongiftSearchHistory.m */; };
+		A052D9271DE2C41400D6F55C /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D8E61DE2C41400D6F55C /* AFHTTPSessionManager.m */; };
+		A052D9281DE2C41400D6F55C /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D8E91DE2C41400D6F55C /* AFNetworkReachabilityManager.m */; };
+		A052D9291DE2C41400D6F55C /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D8EB1DE2C41400D6F55C /* AFSecurityPolicy.m */; };
+		A052D92A1DE2C41400D6F55C /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D8ED1DE2C41400D6F55C /* AFURLRequestSerialization.m */; };
+		A052D92B1DE2C41400D6F55C /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D8EF1DE2C41400D6F55C /* AFURLResponseSerialization.m */; };
+		A052D92C1DE2C41400D6F55C /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D8F11DE2C41400D6F55C /* AFURLSessionManager.m */; };
+		A052D92D1DE2C41400D6F55C /* PongiftCookieStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D8F31DE2C41400D6F55C /* PongiftCookieStore.m */; };
+		A052D92E1DE2C41400D6F55C /* PongiftRestService.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D8F51DE2C41400D6F55C /* PongiftRestService.m */; };
+		A052D92F1DE2C41400D6F55C /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D8F81DE2C41400D6F55C /* AFAutoPurgingImageCache.m */; };
+		A052D9301DE2C41400D6F55C /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D8FA1DE2C41400D6F55C /* AFImageDownloader.m */; };
+		A052D9311DE2C41400D6F55C /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D8FC1DE2C41400D6F55C /* AFNetworkActivityIndicatorManager.m */; };
+		A052D9321DE2C41400D6F55C /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D8FE1DE2C41400D6F55C /* UIActivityIndicatorView+AFNetworking.m */; };
+		A052D9331DE2C41400D6F55C /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D9001DE2C41400D6F55C /* UIButton+AFNetworking.m */; };
+		A052D9341DE2C41400D6F55C /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D9031DE2C41400D6F55C /* UIImageView+AFNetworking.m */; };
+		A052D9351DE2C41400D6F55C /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D9061DE2C41400D6F55C /* UIProgressView+AFNetworking.m */; };
+		A052D9361DE2C41400D6F55C /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D9081DE2C41400D6F55C /* UIRefreshControl+AFNetworking.m */; };
+		A052D9371DE2C41400D6F55C /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D90A1DE2C41400D6F55C /* UIWebView+AFNetworking.m */; };
+		A052D9381DE2C41400D6F55C /* PongiftBridgeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D90D1DE2C41400D6F55C /* PongiftBridgeHelper.m */; };
+		A052D9391DE2C41400D6F55C /* PongiftUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D90F1DE2C41400D6F55C /* PongiftUtils.m */; };
+		A052D93A1DE2C41400D6F55C /* PongiftMemorialPushPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A052D9111DE2C41400D6F55C /* PongiftMemorialPushPopUpViewController.xib */; };
+		A052D93B1DE2C41400D6F55C /* PongiftPushPopUpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D9131DE2C41400D6F55C /* PongiftPushPopUpCell.m */; };
+		A052D93C1DE2C41400D6F55C /* PongiftPushPopUpCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A052D9141DE2C41400D6F55C /* PongiftPushPopUpCell.xib */; };
+		A052D93D1DE2C41400D6F55C /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D9171DE2C41400D6F55C /* WebViewJavascriptBridge.m */; };
+		A052D93E1DE2C41400D6F55C /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D9191DE2C41400D6F55C /* WebViewJavascriptBridge_JS.m */; };
+		A052D93F1DE2C41400D6F55C /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D91B1DE2C41400D6F55C /* WebViewJavascriptBridgeBase.m */; };
+		A052D9401DE2C41400D6F55C /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D91D1DE2C41400D6F55C /* WKWebViewJavascriptBridge.m */; };
 		A053E8E91DC09F74007D5875 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A053E8E81DC09F74007D5875 /* main.m */; };
 		A053E8EC1DC09F74007D5875 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A053E8EB1DC09F74007D5875 /* AppDelegate.m */; };
 		A053E8EF1DC09F74007D5875 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A053E8EE1DC09F74007D5875 /* ViewController.m */; };
@@ -14,41 +49,7 @@
 		A053E8F41DC09F74007D5875 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A053E8F31DC09F74007D5875 /* Assets.xcassets */; };
 		A053E8F71DC09F74007D5875 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A053E8F51DC09F74007D5875 /* LaunchScreen.storyboard */; };
 		A053E9021DC09F74007D5875 /* pongiftTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A053E9011DC09F74007D5875 /* pongiftTestTests.m */; };
-		A0D180BC1DD0AE400072425D /* PongiftAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0D1806A1DD0AE400072425D /* PongiftAssets.xcassets */; };
-		A0D180BD1DD0AE400072425D /* PongiftConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1806D1DD0AE400072425D /* PongiftConstants.m */; };
-		A0D180BE1DD0AE400072425D /* PongiftMemorialPushPopUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D180701DD0AE400072425D /* PongiftMemorialPushPopUpViewController.m */; };
-		A0D180BF1DD0AE400072425D /* PongiftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D180721DD0AE400072425D /* PongiftViewController.m */; };
-		A0D180C01DD0AE400072425D /* PongiftAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D180751DD0AE400072425D /* PongiftAgent.m */; };
-		A0D180C11DD0AE400072425D /* PongiftContactsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D180771DD0AE400072425D /* PongiftContactsManager.m */; };
-		A0D180C21DD0AE400072425D /* PongiftLocalNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D180791DD0AE400072425D /* PongiftLocalNotificationManager.m */; };
-		A0D180C31DD0AE400072425D /* PongiftPersistenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1807B1DD0AE400072425D /* PongiftPersistenceManager.m */; };
-		A0D180C51DD0AE400072425D /* PongiftSearchHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D180801DD0AE400072425D /* PongiftSearchHistory.m */; };
-		A0D180C61DD0AE400072425D /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D180841DD0AE400072425D /* AFHTTPSessionManager.m */; };
-		A0D180C71DD0AE400072425D /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D180871DD0AE400072425D /* AFNetworkReachabilityManager.m */; };
-		A0D180C81DD0AE400072425D /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D180891DD0AE400072425D /* AFSecurityPolicy.m */; };
-		A0D180C91DD0AE400072425D /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1808B1DD0AE400072425D /* AFURLRequestSerialization.m */; };
-		A0D180CA1DD0AE400072425D /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1808D1DD0AE400072425D /* AFURLResponseSerialization.m */; };
-		A0D180CB1DD0AE400072425D /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1808F1DD0AE400072425D /* AFURLSessionManager.m */; };
-		A0D180CC1DD0AE400072425D /* PongiftCookieStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D180911DD0AE400072425D /* PongiftCookieStore.m */; };
-		A0D180CD1DD0AE400072425D /* PongiftRestService.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D180931DD0AE400072425D /* PongiftRestService.m */; };
-		A0D180CE1DD0AE400072425D /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D180961DD0AE400072425D /* AFAutoPurgingImageCache.m */; };
-		A0D180CF1DD0AE400072425D /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D180981DD0AE400072425D /* AFImageDownloader.m */; };
-		A0D180D01DD0AE400072425D /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1809A1DD0AE400072425D /* AFNetworkActivityIndicatorManager.m */; };
-		A0D180D11DD0AE400072425D /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1809C1DD0AE400072425D /* UIActivityIndicatorView+AFNetworking.m */; };
-		A0D180D21DD0AE400072425D /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1809E1DD0AE400072425D /* UIButton+AFNetworking.m */; };
-		A0D180D31DD0AE400072425D /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D180A11DD0AE400072425D /* UIImageView+AFNetworking.m */; };
-		A0D180D41DD0AE400072425D /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D180A41DD0AE400072425D /* UIProgressView+AFNetworking.m */; };
-		A0D180D51DD0AE400072425D /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D180A61DD0AE400072425D /* UIRefreshControl+AFNetworking.m */; };
-		A0D180D61DD0AE400072425D /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D180A81DD0AE400072425D /* UIWebView+AFNetworking.m */; };
-		A0D180D71DD0AE400072425D /* PongiftBridgeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D180AB1DD0AE400072425D /* PongiftBridgeHelper.m */; };
-		A0D180D81DD0AE400072425D /* PongiftUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D180AD1DD0AE400072425D /* PongiftUtils.m */; };
-		A0D180D91DD0AE400072425D /* PongiftMemorialPushPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D180AF1DD0AE400072425D /* PongiftMemorialPushPopUpViewController.xib */; };
-		A0D180DA1DD0AE400072425D /* PongiftPushPopUpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D180B11DD0AE400072425D /* PongiftPushPopUpCell.m */; };
-		A0D180DB1DD0AE400072425D /* PongiftPushPopUpCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D180B21DD0AE400072425D /* PongiftPushPopUpCell.xib */; };
-		A0D180DC1DD0AE400072425D /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D180B51DD0AE400072425D /* WebViewJavascriptBridge.m */; };
-		A0D180DD1DD0AE400072425D /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D180B71DD0AE400072425D /* WebViewJavascriptBridge_JS.m */; };
-		A0D180DE1DD0AE400072425D /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D180B91DD0AE400072425D /* WebViewJavascriptBridgeBase.m */; };
-		A0D180DF1DD0AE400072425D /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D180BB1DD0AE400072425D /* WKWebViewJavascriptBridge.m */; };
+		A0C244FE1DE2BD6D0013C25F /* Pongift in Resources */ = {isa = PBXBuildFile; fileRef = A0C244FD1DE2BD6D0013C25F /* Pongift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,76 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A052D8CE1DE2C41400D6F55C /* PongiftAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PongiftAssets.xcassets; sourceTree = "<group>"; };
+		A052D8D01DE2C41400D6F55C /* PongiftConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftConstants.h; sourceTree = "<group>"; };
+		A052D8D11DE2C41400D6F55C /* PongiftConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftConstants.m; sourceTree = "<group>"; };
+		A052D8D31DE2C41400D6F55C /* PongiftMemorialPushPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftMemorialPushPopUpViewController.h; sourceTree = "<group>"; };
+		A052D8D41DE2C41400D6F55C /* PongiftMemorialPushPopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftMemorialPushPopUpViewController.m; sourceTree = "<group>"; };
+		A052D8D51DE2C41400D6F55C /* PongiftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftViewController.h; sourceTree = "<group>"; };
+		A052D8D61DE2C41400D6F55C /* PongiftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftViewController.m; sourceTree = "<group>"; };
+		A052D8D81DE2C41400D6F55C /* PongiftAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftAgent.h; sourceTree = "<group>"; };
+		A052D8D91DE2C41400D6F55C /* PongiftAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftAgent.m; sourceTree = "<group>"; };
+		A052D8DA1DE2C41400D6F55C /* PongiftContactsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftContactsManager.h; sourceTree = "<group>"; };
+		A052D8DB1DE2C41400D6F55C /* PongiftContactsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftContactsManager.m; sourceTree = "<group>"; };
+		A052D8DC1DE2C41400D6F55C /* PongiftLocalNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftLocalNotificationManager.h; sourceTree = "<group>"; };
+		A052D8DD1DE2C41400D6F55C /* PongiftLocalNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftLocalNotificationManager.m; sourceTree = "<group>"; };
+		A052D8DE1DE2C41400D6F55C /* PongiftPersistenceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftPersistenceManager.h; sourceTree = "<group>"; };
+		A052D8DF1DE2C41400D6F55C /* PongiftPersistenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftPersistenceManager.m; sourceTree = "<group>"; };
+		A052D8E11DE2C41400D6F55C /* PongiftSearchHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftSearchHistory.h; sourceTree = "<group>"; };
+		A052D8E21DE2C41400D6F55C /* PongiftSearchHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftSearchHistory.m; sourceTree = "<group>"; };
+		A052D8E51DE2C41400D6F55C /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		A052D8E61DE2C41400D6F55C /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		A052D8E71DE2C41400D6F55C /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		A052D8E81DE2C41400D6F55C /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		A052D8E91DE2C41400D6F55C /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		A052D8EA1DE2C41400D6F55C /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		A052D8EB1DE2C41400D6F55C /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		A052D8EC1DE2C41400D6F55C /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		A052D8ED1DE2C41400D6F55C /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		A052D8EE1DE2C41400D6F55C /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		A052D8EF1DE2C41400D6F55C /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		A052D8F01DE2C41400D6F55C /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		A052D8F11DE2C41400D6F55C /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		A052D8F21DE2C41400D6F55C /* PongiftCookieStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftCookieStore.h; sourceTree = "<group>"; };
+		A052D8F31DE2C41400D6F55C /* PongiftCookieStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftCookieStore.m; sourceTree = "<group>"; };
+		A052D8F41DE2C41400D6F55C /* PongiftRestService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftRestService.h; sourceTree = "<group>"; };
+		A052D8F51DE2C41400D6F55C /* PongiftRestService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftRestService.m; sourceTree = "<group>"; };
+		A052D8F71DE2C41400D6F55C /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAutoPurgingImageCache.h; sourceTree = "<group>"; };
+		A052D8F81DE2C41400D6F55C /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAutoPurgingImageCache.m; sourceTree = "<group>"; };
+		A052D8F91DE2C41400D6F55C /* AFImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageDownloader.h; sourceTree = "<group>"; };
+		A052D8FA1DE2C41400D6F55C /* AFImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloader.m; sourceTree = "<group>"; };
+		A052D8FB1DE2C41400D6F55C /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		A052D8FC1DE2C41400D6F55C /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		A052D8FD1DE2C41400D6F55C /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
+		A052D8FE1DE2C41400D6F55C /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
+		A052D8FF1DE2C41400D6F55C /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+AFNetworking.h"; sourceTree = "<group>"; };
+		A052D9001DE2C41400D6F55C /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+AFNetworking.m"; sourceTree = "<group>"; };
+		A052D9011DE2C41400D6F55C /* UIImage+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AFNetworking.h"; sourceTree = "<group>"; };
+		A052D9021DE2C41400D6F55C /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		A052D9031DE2C41400D6F55C /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		A052D9041DE2C41400D6F55C /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+AFNetworking.h"; sourceTree = "<group>"; };
+		A052D9051DE2C41400D6F55C /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
+		A052D9061DE2C41400D6F55C /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
+		A052D9071DE2C41400D6F55C /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
+		A052D9081DE2C41400D6F55C /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
+		A052D9091DE2C41400D6F55C /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
+		A052D90A1DE2C41400D6F55C /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		A052D90C1DE2C41400D6F55C /* PongiftBridgeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftBridgeHelper.h; sourceTree = "<group>"; };
+		A052D90D1DE2C41400D6F55C /* PongiftBridgeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftBridgeHelper.m; sourceTree = "<group>"; };
+		A052D90E1DE2C41400D6F55C /* PongiftUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftUtils.h; sourceTree = "<group>"; };
+		A052D90F1DE2C41400D6F55C /* PongiftUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftUtils.m; sourceTree = "<group>"; };
+		A052D9111DE2C41400D6F55C /* PongiftMemorialPushPopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PongiftMemorialPushPopUpViewController.xib; sourceTree = "<group>"; };
+		A052D9121DE2C41400D6F55C /* PongiftPushPopUpCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftPushPopUpCell.h; sourceTree = "<group>"; };
+		A052D9131DE2C41400D6F55C /* PongiftPushPopUpCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftPushPopUpCell.m; sourceTree = "<group>"; };
+		A052D9141DE2C41400D6F55C /* PongiftPushPopUpCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PongiftPushPopUpCell.xib; sourceTree = "<group>"; };
+		A052D9161DE2C41400D6F55C /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		A052D9171DE2C41400D6F55C /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		A052D9181DE2C41400D6F55C /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
+		A052D9191DE2C41400D6F55C /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
+		A052D91A1DE2C41400D6F55C /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		A052D91B1DE2C41400D6F55C /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
+		A052D91C1DE2C41400D6F55C /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		A052D91D1DE2C41400D6F55C /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
 		A053E8E41DC09F74007D5875 /* pongiftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pongiftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A053E8E81DC09F74007D5875 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A053E8EA1DC09F74007D5875 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -75,77 +146,7 @@
 		A053E8FD1DC09F74007D5875 /* pongiftTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pongiftTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A053E9011DC09F74007D5875 /* pongiftTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pongiftTestTests.m; sourceTree = "<group>"; };
 		A053E9031DC09F74007D5875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A0D1806A1DD0AE400072425D /* PongiftAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PongiftAssets.xcassets; sourceTree = "<group>"; };
-		A0D1806C1DD0AE400072425D /* PongiftConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftConstants.h; sourceTree = "<group>"; };
-		A0D1806D1DD0AE400072425D /* PongiftConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftConstants.m; sourceTree = "<group>"; };
-		A0D1806F1DD0AE400072425D /* PongiftMemorialPushPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftMemorialPushPopUpViewController.h; sourceTree = "<group>"; };
-		A0D180701DD0AE400072425D /* PongiftMemorialPushPopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftMemorialPushPopUpViewController.m; sourceTree = "<group>"; };
-		A0D180711DD0AE400072425D /* PongiftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftViewController.h; sourceTree = "<group>"; };
-		A0D180721DD0AE400072425D /* PongiftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftViewController.m; sourceTree = "<group>"; };
-		A0D180741DD0AE400072425D /* PongiftAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftAgent.h; sourceTree = "<group>"; };
-		A0D180751DD0AE400072425D /* PongiftAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftAgent.m; sourceTree = "<group>"; };
-		A0D180761DD0AE400072425D /* PongiftContactsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftContactsManager.h; sourceTree = "<group>"; };
-		A0D180771DD0AE400072425D /* PongiftContactsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftContactsManager.m; sourceTree = "<group>"; };
-		A0D180781DD0AE400072425D /* PongiftLocalNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftLocalNotificationManager.h; sourceTree = "<group>"; };
-		A0D180791DD0AE400072425D /* PongiftLocalNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftLocalNotificationManager.m; sourceTree = "<group>"; };
-		A0D1807A1DD0AE400072425D /* PongiftPersistenceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftPersistenceManager.h; sourceTree = "<group>"; };
-		A0D1807B1DD0AE400072425D /* PongiftPersistenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftPersistenceManager.m; sourceTree = "<group>"; };
-		A0D1807F1DD0AE400072425D /* PongiftSearchHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftSearchHistory.h; sourceTree = "<group>"; };
-		A0D180801DD0AE400072425D /* PongiftSearchHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftSearchHistory.m; sourceTree = "<group>"; };
-		A0D180831DD0AE400072425D /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
-		A0D180841DD0AE400072425D /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
-		A0D180851DD0AE400072425D /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
-		A0D180861DD0AE400072425D /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
-		A0D180871DD0AE400072425D /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
-		A0D180881DD0AE400072425D /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
-		A0D180891DD0AE400072425D /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
-		A0D1808A1DD0AE400072425D /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
-		A0D1808B1DD0AE400072425D /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
-		A0D1808C1DD0AE400072425D /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
-		A0D1808D1DD0AE400072425D /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
-		A0D1808E1DD0AE400072425D /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
-		A0D1808F1DD0AE400072425D /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		A0D180901DD0AE400072425D /* PongiftCookieStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftCookieStore.h; sourceTree = "<group>"; };
-		A0D180911DD0AE400072425D /* PongiftCookieStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftCookieStore.m; sourceTree = "<group>"; };
-		A0D180921DD0AE400072425D /* PongiftRestService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftRestService.h; sourceTree = "<group>"; };
-		A0D180931DD0AE400072425D /* PongiftRestService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftRestService.m; sourceTree = "<group>"; };
-		A0D180951DD0AE400072425D /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAutoPurgingImageCache.h; sourceTree = "<group>"; };
-		A0D180961DD0AE400072425D /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAutoPurgingImageCache.m; sourceTree = "<group>"; };
-		A0D180971DD0AE400072425D /* AFImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageDownloader.h; sourceTree = "<group>"; };
-		A0D180981DD0AE400072425D /* AFImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloader.m; sourceTree = "<group>"; };
-		A0D180991DD0AE400072425D /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
-		A0D1809A1DD0AE400072425D /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
-		A0D1809B1DD0AE400072425D /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
-		A0D1809C1DD0AE400072425D /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
-		A0D1809D1DD0AE400072425D /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+AFNetworking.h"; sourceTree = "<group>"; };
-		A0D1809E1DD0AE400072425D /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+AFNetworking.m"; sourceTree = "<group>"; };
-		A0D1809F1DD0AE400072425D /* UIImage+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AFNetworking.h"; sourceTree = "<group>"; };
-		A0D180A01DD0AE400072425D /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
-		A0D180A11DD0AE400072425D /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		A0D180A21DD0AE400072425D /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+AFNetworking.h"; sourceTree = "<group>"; };
-		A0D180A31DD0AE400072425D /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
-		A0D180A41DD0AE400072425D /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
-		A0D180A51DD0AE400072425D /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
-		A0D180A61DD0AE400072425D /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
-		A0D180A71DD0AE400072425D /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
-		A0D180A81DD0AE400072425D /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
-		A0D180AA1DD0AE400072425D /* PongiftBridgeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftBridgeHelper.h; sourceTree = "<group>"; };
-		A0D180AB1DD0AE400072425D /* PongiftBridgeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftBridgeHelper.m; sourceTree = "<group>"; };
-		A0D180AC1DD0AE400072425D /* PongiftUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftUtils.h; sourceTree = "<group>"; };
-		A0D180AD1DD0AE400072425D /* PongiftUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftUtils.m; sourceTree = "<group>"; };
-		A0D180AF1DD0AE400072425D /* PongiftMemorialPushPopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PongiftMemorialPushPopUpViewController.xib; sourceTree = "<group>"; };
-		A0D180B01DD0AE400072425D /* PongiftPushPopUpCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftPushPopUpCell.h; sourceTree = "<group>"; };
-		A0D180B11DD0AE400072425D /* PongiftPushPopUpCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftPushPopUpCell.m; sourceTree = "<group>"; };
-		A0D180B21DD0AE400072425D /* PongiftPushPopUpCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PongiftPushPopUpCell.xib; sourceTree = "<group>"; };
-		A0D180B41DD0AE400072425D /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
-		A0D180B51DD0AE400072425D /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
-		A0D180B61DD0AE400072425D /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
-		A0D180B71DD0AE400072425D /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
-		A0D180B81DD0AE400072425D /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
-		A0D180B91DD0AE400072425D /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
-		A0D180BA1DD0AE400072425D /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
-		A0D180BB1DD0AE400072425D /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
-		A0DD3D0F1DC8DCAF0058C753 /* PongiftSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PongiftSDK.framework; path = "../../Library/Developer/Xcode/DerivedData/PongiftSDK-gsgzsirnhpbvjgfxxdhgxfsqdlav/Build/Products/Debug-iphonesimulator/PongiftSDK.framework"; sourceTree = "<group>"; };
+		A0C244FD1DE2BD6D0013C25F /* Pongift */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Pongift; path = "/Users/sngjoong/Documents/sgdevelopments/platfos/pongift-sdk-ios/PongiftSDK/Pongift"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +167,172 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A052D8CC1DE2C41400D6F55C /* Pongift */ = {
+			isa = PBXGroup;
+			children = (
+				A052D8CD1DE2C41400D6F55C /* Assets */,
+				A052D8CF1DE2C41400D6F55C /* Constants */,
+				A052D8D21DE2C41400D6F55C /* Controllers */,
+				A052D8D71DE2C41400D6F55C /* Managers */,
+				A052D8E01DE2C41400D6F55C /* Models */,
+				A052D8E31DE2C41400D6F55C /* Network */,
+				A052D90B1DE2C41400D6F55C /* Utils */,
+				A052D9101DE2C41400D6F55C /* Views */,
+				A052D9151DE2C41400D6F55C /* WebBridge */,
+			);
+			name = Pongift;
+			path = "../../pongift-sdk-ios/PongiftSDK/Pongift";
+			sourceTree = "<group>";
+		};
+		A052D8CD1DE2C41400D6F55C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A052D8CE1DE2C41400D6F55C /* PongiftAssets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		A052D8CF1DE2C41400D6F55C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A052D8D01DE2C41400D6F55C /* PongiftConstants.h */,
+				A052D8D11DE2C41400D6F55C /* PongiftConstants.m */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		A052D8D21DE2C41400D6F55C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A052D8D31DE2C41400D6F55C /* PongiftMemorialPushPopUpViewController.h */,
+				A052D8D41DE2C41400D6F55C /* PongiftMemorialPushPopUpViewController.m */,
+				A052D8D51DE2C41400D6F55C /* PongiftViewController.h */,
+				A052D8D61DE2C41400D6F55C /* PongiftViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A052D8D71DE2C41400D6F55C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A052D8D81DE2C41400D6F55C /* PongiftAgent.h */,
+				A052D8D91DE2C41400D6F55C /* PongiftAgent.m */,
+				A052D8DA1DE2C41400D6F55C /* PongiftContactsManager.h */,
+				A052D8DB1DE2C41400D6F55C /* PongiftContactsManager.m */,
+				A052D8DC1DE2C41400D6F55C /* PongiftLocalNotificationManager.h */,
+				A052D8DD1DE2C41400D6F55C /* PongiftLocalNotificationManager.m */,
+				A052D8DE1DE2C41400D6F55C /* PongiftPersistenceManager.h */,
+				A052D8DF1DE2C41400D6F55C /* PongiftPersistenceManager.m */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		A052D8E01DE2C41400D6F55C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A052D8E11DE2C41400D6F55C /* PongiftSearchHistory.h */,
+				A052D8E21DE2C41400D6F55C /* PongiftSearchHistory.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A052D8E31DE2C41400D6F55C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A052D8E41DE2C41400D6F55C /* AFNetworking */,
+				A052D8F21DE2C41400D6F55C /* PongiftCookieStore.h */,
+				A052D8F31DE2C41400D6F55C /* PongiftCookieStore.m */,
+				A052D8F41DE2C41400D6F55C /* PongiftRestService.h */,
+				A052D8F51DE2C41400D6F55C /* PongiftRestService.m */,
+				A052D8F61DE2C41400D6F55C /* UIKit+AFNetworking */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A052D8E41DE2C41400D6F55C /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				A052D8E51DE2C41400D6F55C /* AFHTTPSessionManager.h */,
+				A052D8E61DE2C41400D6F55C /* AFHTTPSessionManager.m */,
+				A052D8E71DE2C41400D6F55C /* AFNetworking.h */,
+				A052D8E81DE2C41400D6F55C /* AFNetworkReachabilityManager.h */,
+				A052D8E91DE2C41400D6F55C /* AFNetworkReachabilityManager.m */,
+				A052D8EA1DE2C41400D6F55C /* AFSecurityPolicy.h */,
+				A052D8EB1DE2C41400D6F55C /* AFSecurityPolicy.m */,
+				A052D8EC1DE2C41400D6F55C /* AFURLRequestSerialization.h */,
+				A052D8ED1DE2C41400D6F55C /* AFURLRequestSerialization.m */,
+				A052D8EE1DE2C41400D6F55C /* AFURLResponseSerialization.h */,
+				A052D8EF1DE2C41400D6F55C /* AFURLResponseSerialization.m */,
+				A052D8F01DE2C41400D6F55C /* AFURLSessionManager.h */,
+				A052D8F11DE2C41400D6F55C /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		A052D8F61DE2C41400D6F55C /* UIKit+AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				A052D8F71DE2C41400D6F55C /* AFAutoPurgingImageCache.h */,
+				A052D8F81DE2C41400D6F55C /* AFAutoPurgingImageCache.m */,
+				A052D8F91DE2C41400D6F55C /* AFImageDownloader.h */,
+				A052D8FA1DE2C41400D6F55C /* AFImageDownloader.m */,
+				A052D8FB1DE2C41400D6F55C /* AFNetworkActivityIndicatorManager.h */,
+				A052D8FC1DE2C41400D6F55C /* AFNetworkActivityIndicatorManager.m */,
+				A052D8FD1DE2C41400D6F55C /* UIActivityIndicatorView+AFNetworking.h */,
+				A052D8FE1DE2C41400D6F55C /* UIActivityIndicatorView+AFNetworking.m */,
+				A052D8FF1DE2C41400D6F55C /* UIButton+AFNetworking.h */,
+				A052D9001DE2C41400D6F55C /* UIButton+AFNetworking.m */,
+				A052D9011DE2C41400D6F55C /* UIImage+AFNetworking.h */,
+				A052D9021DE2C41400D6F55C /* UIImageView+AFNetworking.h */,
+				A052D9031DE2C41400D6F55C /* UIImageView+AFNetworking.m */,
+				A052D9041DE2C41400D6F55C /* UIKit+AFNetworking.h */,
+				A052D9051DE2C41400D6F55C /* UIProgressView+AFNetworking.h */,
+				A052D9061DE2C41400D6F55C /* UIProgressView+AFNetworking.m */,
+				A052D9071DE2C41400D6F55C /* UIRefreshControl+AFNetworking.h */,
+				A052D9081DE2C41400D6F55C /* UIRefreshControl+AFNetworking.m */,
+				A052D9091DE2C41400D6F55C /* UIWebView+AFNetworking.h */,
+				A052D90A1DE2C41400D6F55C /* UIWebView+AFNetworking.m */,
+			);
+			path = "UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		A052D90B1DE2C41400D6F55C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A052D90C1DE2C41400D6F55C /* PongiftBridgeHelper.h */,
+				A052D90D1DE2C41400D6F55C /* PongiftBridgeHelper.m */,
+				A052D90E1DE2C41400D6F55C /* PongiftUtils.h */,
+				A052D90F1DE2C41400D6F55C /* PongiftUtils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A052D9101DE2C41400D6F55C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A052D9111DE2C41400D6F55C /* PongiftMemorialPushPopUpViewController.xib */,
+				A052D9121DE2C41400D6F55C /* PongiftPushPopUpCell.h */,
+				A052D9131DE2C41400D6F55C /* PongiftPushPopUpCell.m */,
+				A052D9141DE2C41400D6F55C /* PongiftPushPopUpCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A052D9151DE2C41400D6F55C /* WebBridge */ = {
+			isa = PBXGroup;
+			children = (
+				A052D9161DE2C41400D6F55C /* WebViewJavascriptBridge.h */,
+				A052D9171DE2C41400D6F55C /* WebViewJavascriptBridge.m */,
+				A052D9181DE2C41400D6F55C /* WebViewJavascriptBridge_JS.h */,
+				A052D9191DE2C41400D6F55C /* WebViewJavascriptBridge_JS.m */,
+				A052D91A1DE2C41400D6F55C /* WebViewJavascriptBridgeBase.h */,
+				A052D91B1DE2C41400D6F55C /* WebViewJavascriptBridgeBase.m */,
+				A052D91C1DE2C41400D6F55C /* WKWebViewJavascriptBridge.h */,
+				A052D91D1DE2C41400D6F55C /* WKWebViewJavascriptBridge.m */,
+			);
+			path = WebBridge;
+			sourceTree = "<group>";
+		};
 		A053E8DB1DC09F74007D5875 = {
 			isa = PBXGroup;
 			children = (
@@ -188,7 +355,7 @@
 		A053E8E61DC09F74007D5875 /* pongiftTest */ = {
 			isa = PBXGroup;
 			children = (
-				A0D180681DD0AE400072425D /* Pongift */,
+				A052D8CC1DE2C41400D6F55C /* Pongift */,
 				A053E8EA1DC09F74007D5875 /* AppDelegate.h */,
 				A053E8EB1DC09F74007D5875 /* AppDelegate.m */,
 				A053E8ED1DC09F74007D5875 /* ViewController.h */,
@@ -219,175 +386,9 @@
 			path = pongiftTestTests;
 			sourceTree = "<group>";
 		};
-		A0D180681DD0AE400072425D /* Pongift */ = {
-			isa = PBXGroup;
-			children = (
-				A0D180691DD0AE400072425D /* Assets */,
-				A0D1806B1DD0AE400072425D /* Constants */,
-				A0D1806E1DD0AE400072425D /* Controllers */,
-				A0D180731DD0AE400072425D /* Managers */,
-				A0D1807C1DD0AE400072425D /* Models */,
-				A0D180811DD0AE400072425D /* Network */,
-				A0D180A91DD0AE400072425D /* Utils */,
-				A0D180AE1DD0AE400072425D /* Views */,
-				A0D180B31DD0AE400072425D /* WebBridge */,
-			);
-			path = Pongift;
-			sourceTree = "<group>";
-		};
-		A0D180691DD0AE400072425D /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				A0D1806A1DD0AE400072425D /* PongiftAssets.xcassets */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
-		A0D1806B1DD0AE400072425D /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				A0D1806C1DD0AE400072425D /* PongiftConstants.h */,
-				A0D1806D1DD0AE400072425D /* PongiftConstants.m */,
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
-		A0D1806E1DD0AE400072425D /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				A0D1806F1DD0AE400072425D /* PongiftMemorialPushPopUpViewController.h */,
-				A0D180701DD0AE400072425D /* PongiftMemorialPushPopUpViewController.m */,
-				A0D180711DD0AE400072425D /* PongiftViewController.h */,
-				A0D180721DD0AE400072425D /* PongiftViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		A0D180731DD0AE400072425D /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				A0D180741DD0AE400072425D /* PongiftAgent.h */,
-				A0D180751DD0AE400072425D /* PongiftAgent.m */,
-				A0D180761DD0AE400072425D /* PongiftContactsManager.h */,
-				A0D180771DD0AE400072425D /* PongiftContactsManager.m */,
-				A0D180781DD0AE400072425D /* PongiftLocalNotificationManager.h */,
-				A0D180791DD0AE400072425D /* PongiftLocalNotificationManager.m */,
-				A0D1807A1DD0AE400072425D /* PongiftPersistenceManager.h */,
-				A0D1807B1DD0AE400072425D /* PongiftPersistenceManager.m */,
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
-		A0D1807C1DD0AE400072425D /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				A0D1807F1DD0AE400072425D /* PongiftSearchHistory.h */,
-				A0D180801DD0AE400072425D /* PongiftSearchHistory.m */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		A0D180811DD0AE400072425D /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				A0D180821DD0AE400072425D /* AFNetworking */,
-				A0D180901DD0AE400072425D /* PongiftCookieStore.h */,
-				A0D180911DD0AE400072425D /* PongiftCookieStore.m */,
-				A0D180921DD0AE400072425D /* PongiftRestService.h */,
-				A0D180931DD0AE400072425D /* PongiftRestService.m */,
-				A0D180941DD0AE400072425D /* UIKit+AFNetworking */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		A0D180821DD0AE400072425D /* AFNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				A0D180831DD0AE400072425D /* AFHTTPSessionManager.h */,
-				A0D180841DD0AE400072425D /* AFHTTPSessionManager.m */,
-				A0D180851DD0AE400072425D /* AFNetworking.h */,
-				A0D180861DD0AE400072425D /* AFNetworkReachabilityManager.h */,
-				A0D180871DD0AE400072425D /* AFNetworkReachabilityManager.m */,
-				A0D180881DD0AE400072425D /* AFSecurityPolicy.h */,
-				A0D180891DD0AE400072425D /* AFSecurityPolicy.m */,
-				A0D1808A1DD0AE400072425D /* AFURLRequestSerialization.h */,
-				A0D1808B1DD0AE400072425D /* AFURLRequestSerialization.m */,
-				A0D1808C1DD0AE400072425D /* AFURLResponseSerialization.h */,
-				A0D1808D1DD0AE400072425D /* AFURLResponseSerialization.m */,
-				A0D1808E1DD0AE400072425D /* AFURLSessionManager.h */,
-				A0D1808F1DD0AE400072425D /* AFURLSessionManager.m */,
-			);
-			path = AFNetworking;
-			sourceTree = "<group>";
-		};
-		A0D180941DD0AE400072425D /* UIKit+AFNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				A0D180951DD0AE400072425D /* AFAutoPurgingImageCache.h */,
-				A0D180961DD0AE400072425D /* AFAutoPurgingImageCache.m */,
-				A0D180971DD0AE400072425D /* AFImageDownloader.h */,
-				A0D180981DD0AE400072425D /* AFImageDownloader.m */,
-				A0D180991DD0AE400072425D /* AFNetworkActivityIndicatorManager.h */,
-				A0D1809A1DD0AE400072425D /* AFNetworkActivityIndicatorManager.m */,
-				A0D1809B1DD0AE400072425D /* UIActivityIndicatorView+AFNetworking.h */,
-				A0D1809C1DD0AE400072425D /* UIActivityIndicatorView+AFNetworking.m */,
-				A0D1809D1DD0AE400072425D /* UIButton+AFNetworking.h */,
-				A0D1809E1DD0AE400072425D /* UIButton+AFNetworking.m */,
-				A0D1809F1DD0AE400072425D /* UIImage+AFNetworking.h */,
-				A0D180A01DD0AE400072425D /* UIImageView+AFNetworking.h */,
-				A0D180A11DD0AE400072425D /* UIImageView+AFNetworking.m */,
-				A0D180A21DD0AE400072425D /* UIKit+AFNetworking.h */,
-				A0D180A31DD0AE400072425D /* UIProgressView+AFNetworking.h */,
-				A0D180A41DD0AE400072425D /* UIProgressView+AFNetworking.m */,
-				A0D180A51DD0AE400072425D /* UIRefreshControl+AFNetworking.h */,
-				A0D180A61DD0AE400072425D /* UIRefreshControl+AFNetworking.m */,
-				A0D180A71DD0AE400072425D /* UIWebView+AFNetworking.h */,
-				A0D180A81DD0AE400072425D /* UIWebView+AFNetworking.m */,
-			);
-			path = "UIKit+AFNetworking";
-			sourceTree = "<group>";
-		};
-		A0D180A91DD0AE400072425D /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				A0D180AA1DD0AE400072425D /* PongiftBridgeHelper.h */,
-				A0D180AB1DD0AE400072425D /* PongiftBridgeHelper.m */,
-				A0D180AC1DD0AE400072425D /* PongiftUtils.h */,
-				A0D180AD1DD0AE400072425D /* PongiftUtils.m */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		A0D180AE1DD0AE400072425D /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				A0D180AF1DD0AE400072425D /* PongiftMemorialPushPopUpViewController.xib */,
-				A0D180B01DD0AE400072425D /* PongiftPushPopUpCell.h */,
-				A0D180B11DD0AE400072425D /* PongiftPushPopUpCell.m */,
-				A0D180B21DD0AE400072425D /* PongiftPushPopUpCell.xib */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		A0D180B31DD0AE400072425D /* WebBridge */ = {
-			isa = PBXGroup;
-			children = (
-				A0D180B41DD0AE400072425D /* WebViewJavascriptBridge.h */,
-				A0D180B51DD0AE400072425D /* WebViewJavascriptBridge.m */,
-				A0D180B61DD0AE400072425D /* WebViewJavascriptBridge_JS.h */,
-				A0D180B71DD0AE400072425D /* WebViewJavascriptBridge_JS.m */,
-				A0D180B81DD0AE400072425D /* WebViewJavascriptBridgeBase.h */,
-				A0D180B91DD0AE400072425D /* WebViewJavascriptBridgeBase.m */,
-				A0D180BA1DD0AE400072425D /* WKWebViewJavascriptBridge.h */,
-				A0D180BB1DD0AE400072425D /* WKWebViewJavascriptBridge.m */,
-			);
-			path = WebBridge;
-			sourceTree = "<group>";
-		};
 		A0DD3D0E1DC8DCAE0058C753 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A0DD3D0F1DC8DCAF0058C753 /* PongiftSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -476,11 +477,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0D180BC1DD0AE400072425D /* PongiftAssets.xcassets in Resources */,
-				A0D180D91DD0AE400072425D /* PongiftMemorialPushPopUpViewController.xib in Resources */,
-				A0D180DB1DD0AE400072425D /* PongiftPushPopUpCell.xib in Resources */,
 				A053E8F71DC09F74007D5875 /* LaunchScreen.storyboard in Resources */,
+				A052D93A1DE2C41400D6F55C /* PongiftMemorialPushPopUpViewController.xib in Resources */,
+				A052D93C1DE2C41400D6F55C /* PongiftPushPopUpCell.xib in Resources */,
+				A052D91E1DE2C41400D6F55C /* PongiftAssets.xcassets in Resources */,
 				A053E8F41DC09F74007D5875 /* Assets.xcassets in Resources */,
+				A0C244FE1DE2BD6D0013C25F /* Pongift in Resources */,
 				A053E8F21DC09F74007D5875 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,41 +501,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A052D92C1DE2C41400D6F55C /* AFURLSessionManager.m in Sources */,
+				A052D93B1DE2C41400D6F55C /* PongiftPushPopUpCell.m in Sources */,
+				A052D9391DE2C41400D6F55C /* PongiftUtils.m in Sources */,
+				A052D9291DE2C41400D6F55C /* AFSecurityPolicy.m in Sources */,
 				A053E8EF1DC09F74007D5875 /* ViewController.m in Sources */,
-				A0D180D31DD0AE400072425D /* UIImageView+AFNetworking.m in Sources */,
-				A0D180D21DD0AE400072425D /* UIButton+AFNetworking.m in Sources */,
-				A0D180C81DD0AE400072425D /* AFSecurityPolicy.m in Sources */,
-				A0D180DE1DD0AE400072425D /* WebViewJavascriptBridgeBase.m in Sources */,
-				A0D180DF1DD0AE400072425D /* WKWebViewJavascriptBridge.m in Sources */,
-				A0D180BD1DD0AE400072425D /* PongiftConstants.m in Sources */,
-				A0D180C21DD0AE400072425D /* PongiftLocalNotificationManager.m in Sources */,
-				A0D180BF1DD0AE400072425D /* PongiftViewController.m in Sources */,
-				A0D180D11DD0AE400072425D /* UIActivityIndicatorView+AFNetworking.m in Sources */,
-				A0D180CC1DD0AE400072425D /* PongiftCookieStore.m in Sources */,
-				A0D180C01DD0AE400072425D /* PongiftAgent.m in Sources */,
-				A0D180C91DD0AE400072425D /* AFURLRequestSerialization.m in Sources */,
-				A0D180C11DD0AE400072425D /* PongiftContactsManager.m in Sources */,
-				A0D180CB1DD0AE400072425D /* AFURLSessionManager.m in Sources */,
-				A0D180D71DD0AE400072425D /* PongiftBridgeHelper.m in Sources */,
-				A0D180BE1DD0AE400072425D /* PongiftMemorialPushPopUpViewController.m in Sources */,
-				A0D180D81DD0AE400072425D /* PongiftUtils.m in Sources */,
-				A0D180D01DD0AE400072425D /* AFNetworkActivityIndicatorManager.m in Sources */,
-				A0D180CE1DD0AE400072425D /* AFAutoPurgingImageCache.m in Sources */,
-				A0D180C51DD0AE400072425D /* PongiftSearchHistory.m in Sources */,
-				A0D180C31DD0AE400072425D /* PongiftPersistenceManager.m in Sources */,
-				A0D180CA1DD0AE400072425D /* AFURLResponseSerialization.m in Sources */,
-				A0D180C71DD0AE400072425D /* AFNetworkReachabilityManager.m in Sources */,
+				A052D9281DE2C41400D6F55C /* AFNetworkReachabilityManager.m in Sources */,
+				A052D9401DE2C41400D6F55C /* WKWebViewJavascriptBridge.m in Sources */,
+				A052D9311DE2C41400D6F55C /* AFNetworkActivityIndicatorManager.m in Sources */,
+				A052D91F1DE2C41400D6F55C /* PongiftConstants.m in Sources */,
+				A052D9241DE2C41400D6F55C /* PongiftLocalNotificationManager.m in Sources */,
+				A052D9271DE2C41400D6F55C /* AFHTTPSessionManager.m in Sources */,
+				A052D9211DE2C41400D6F55C /* PongiftViewController.m in Sources */,
+				A052D9221DE2C41400D6F55C /* PongiftAgent.m in Sources */,
+				A052D9231DE2C41400D6F55C /* PongiftContactsManager.m in Sources */,
+				A052D9341DE2C41400D6F55C /* UIImageView+AFNetworking.m in Sources */,
+				A052D9351DE2C41400D6F55C /* UIProgressView+AFNetworking.m in Sources */,
+				A052D9201DE2C41400D6F55C /* PongiftMemorialPushPopUpViewController.m in Sources */,
+				A052D9361DE2C41400D6F55C /* UIRefreshControl+AFNetworking.m in Sources */,
+				A052D93D1DE2C41400D6F55C /* WebViewJavascriptBridge.m in Sources */,
+				A052D9301DE2C41400D6F55C /* AFImageDownloader.m in Sources */,
+				A052D9261DE2C41400D6F55C /* PongiftSearchHistory.m in Sources */,
+				A052D9381DE2C41400D6F55C /* PongiftBridgeHelper.m in Sources */,
+				A052D9331DE2C41400D6F55C /* UIButton+AFNetworking.m in Sources */,
+				A052D9251DE2C41400D6F55C /* PongiftPersistenceManager.m in Sources */,
+				A052D92D1DE2C41400D6F55C /* PongiftCookieStore.m in Sources */,
+				A052D92A1DE2C41400D6F55C /* AFURLRequestSerialization.m in Sources */,
+				A052D92F1DE2C41400D6F55C /* AFAutoPurgingImageCache.m in Sources */,
+				A052D9321DE2C41400D6F55C /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				A053E8EC1DC09F74007D5875 /* AppDelegate.m in Sources */,
-				A0D180D51DD0AE400072425D /* UIRefreshControl+AFNetworking.m in Sources */,
-				A0D180DC1DD0AE400072425D /* WebViewJavascriptBridge.m in Sources */,
-				A0D180DD1DD0AE400072425D /* WebViewJavascriptBridge_JS.m in Sources */,
-				A0D180D41DD0AE400072425D /* UIProgressView+AFNetworking.m in Sources */,
-				A0D180CD1DD0AE400072425D /* PongiftRestService.m in Sources */,
-				A0D180D61DD0AE400072425D /* UIWebView+AFNetworking.m in Sources */,
-				A0D180DA1DD0AE400072425D /* PongiftPushPopUpCell.m in Sources */,
+				A052D9371DE2C41400D6F55C /* UIWebView+AFNetworking.m in Sources */,
+				A052D92E1DE2C41400D6F55C /* PongiftRestService.m in Sources */,
+				A052D93F1DE2C41400D6F55C /* WebViewJavascriptBridgeBase.m in Sources */,
+				A052D92B1DE2C41400D6F55C /* AFURLResponseSerialization.m in Sources */,
 				A053E8E91DC09F74007D5875 /* main.m in Sources */,
-				A0D180C61DD0AE400072425D /* AFHTTPSessionManager.m in Sources */,
-				A0D180CF1DD0AE400072425D /* AFImageDownloader.m in Sources */,
+				A052D93E1DE2C41400D6F55C /* WebViewJavascriptBridge_JS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,6 +678,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/pongiftTest",
 				);
+				HEADER_SEARCH_PATHS = "../pongift-sdk-ios/PongiftSDK/Pongift/**";
 				INFOPLIST_FILE = pongiftTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.platfos.pongift2;
@@ -696,6 +699,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/pongiftTest",
 				);
+				HEADER_SEARCH_PATHS = "../pongift-sdk-ios/PongiftSDK/Pongift/**";
 				INFOPLIST_FILE = pongiftTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.platfos.pongift2;

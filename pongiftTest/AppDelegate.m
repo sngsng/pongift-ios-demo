@@ -29,6 +29,7 @@
     // 폰기프트 SDK를 사용하기 위한 초기 설정입니다. (필수)
     [agent setAccessKey:@"j8NtyUuoubAfGShaRQF2MA=="];
     [agent setSecretKey:@"bD3QeKX2rhUcSVlubuy2Dg=="];
+    [agent setAppUrlScheme:@"pongift2://"];
     [agent initializePongiftWithCompletion:^(bool completion) {
         
         if (completion) {

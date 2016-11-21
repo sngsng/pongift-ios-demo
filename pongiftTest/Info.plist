@@ -25,12 +25,12 @@
 			<string>com.platfos.pongift2</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>pongiftTest</string>
+				<string>pongift2</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>8</string>
+	<string>10</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>citispay</string>
