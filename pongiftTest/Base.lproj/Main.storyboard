@@ -28,10 +28,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3y-YM-jxq">
-                                <rect key="frame" x="133" y="198.5" width="108" height="30"/>
-                                <state key="normal" title="폰기프트 선물하기"/>
+                                <rect key="frame" x="100" y="198.5" width="174" height="30"/>
+                                <state key="normal" title="폰기프트 선물하기 (개발서버)"/>
                                 <connections>
-                                    <action selector="openPongiftVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wMw-Jp-zwT"/>
+                                    <action selector="openPongiftVCWithDebug:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Xg-9A-bF6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRf-qe-CSm">
+                                <rect key="frame" x="100" y="247" width="174" height="30"/>
+                                <state key="normal" title="폰기프트 선물하기 (운영서버)"/>
+                                <connections>
+                                    <action selector="openPongiftVCWithRelease:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6aJ-p0-Zpf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQ7-8f-7a8">
@@ -63,7 +70,9 @@
                             <constraint firstAttribute="trailing" secondItem="4Sg-im-SQT" secondAttribute="trailing" id="DjI-Mf-bcf"/>
                             <constraint firstItem="4Sg-im-SQT" firstAttribute="top" secondItem="t8m-IR-b8r" secondAttribute="bottom" constant="37" id="G5h-JT-ddh"/>
                             <constraint firstItem="nQ7-8f-7a8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="KRa-rI-B2x"/>
+                            <constraint firstItem="KRf-qe-CSm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NNE-OP-5OM"/>
                             <constraint firstItem="t8m-IR-b8r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="RHL-K4-2aR"/>
+                            <constraint firstItem="KRf-qe-CSm" firstAttribute="top" secondItem="s3y-YM-jxq" secondAttribute="bottom" constant="18.5" id="XaS-FZ-Ju2"/>
                             <constraint firstItem="s3y-YM-jxq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aND-ds-iW0"/>
                             <constraint firstItem="s3y-YM-jxq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-120" id="bZq-m1-R7s"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4Sg-im-SQT" secondAttribute="bottom" id="mih-86-Fwj"/>

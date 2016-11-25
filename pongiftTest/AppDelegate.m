@@ -20,23 +20,15 @@
     
     
     PongiftAgent *agent = [PongiftAgent sharedInstance];
+    [agent setAppUrlScheme:@"pongift2://"];
     agent.debugMode = true;
     
     // 기념일 알림을 사용할 경우 (선택)
     // 기념일 알림을 사용하기위해 연락처접근과, 알림허용 권한을 요청합니다.
     [agent requestAccessPermissions];
     
-    // 폰기프트 SDK를 사용하기 위한 초기 설정입니다. (필수)
-    [agent setAccessKey:@"j8NtyUuoubAfGShaRQF2MA=="];
-    [agent setSecretKey:@"bD3QeKX2rhUcSVlubuy2Dg=="];
-    [agent setAppUrlScheme:@"pongift2://"];
-    [agent initializePongiftWithCompletion:^(bool completion) {
-        
-        if (completion) {
-            
-            NSLog(@"Initalize success");
-        }
-    }];
+
+
     
     return YES;
 }
