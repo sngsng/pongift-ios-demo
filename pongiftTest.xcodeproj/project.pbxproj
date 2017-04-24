@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A036718F1E641E2B00A08932 /* AFJSONResponseSerializerWithData.m in Sources */ = {isa = PBXBuildFile; fileRef = A036718E1E641E2B00A08932 /* AFJSONResponseSerializerWithData.m */; };
 		A052D91E1DE2C41400D6F55C /* PongiftAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A052D8CE1DE2C41400D6F55C /* PongiftAssets.xcassets */; };
 		A052D91F1DE2C41400D6F55C /* PongiftConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D8D11DE2C41400D6F55C /* PongiftConstants.m */; };
 		A052D9201DE2C41400D6F55C /* PongiftMemorialPushPopUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A052D8D41DE2C41400D6F55C /* PongiftMemorialPushPopUpViewController.m */; };
@@ -63,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A036718D1E641E2B00A08932 /* AFJSONResponseSerializerWithData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONResponseSerializerWithData.h; sourceTree = "<group>"; };
+		A036718E1E641E2B00A08932 /* AFJSONResponseSerializerWithData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONResponseSerializerWithData.m; sourceTree = "<group>"; };
 		A052D8CE1DE2C41400D6F55C /* PongiftAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PongiftAssets.xcassets; sourceTree = "<group>"; };
 		A052D8D01DE2C41400D6F55C /* PongiftConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongiftConstants.h; sourceTree = "<group>"; };
 		A052D8D11DE2C41400D6F55C /* PongiftConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PongiftConstants.m; sourceTree = "<group>"; };
@@ -245,6 +248,8 @@
 				A052D8F41DE2C41400D6F55C /* PongiftRestService.h */,
 				A052D8F51DE2C41400D6F55C /* PongiftRestService.m */,
 				A052D8F61DE2C41400D6F55C /* UIKit+AFNetworking */,
+				A036718D1E641E2B00A08932 /* AFJSONResponseSerializerWithData.h */,
+				A036718E1E641E2B00A08932 /* AFJSONResponseSerializerWithData.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -510,6 +515,7 @@
 				A052D9401DE2C41400D6F55C /* WKWebViewJavascriptBridge.m in Sources */,
 				A052D9311DE2C41400D6F55C /* AFNetworkActivityIndicatorManager.m in Sources */,
 				A052D91F1DE2C41400D6F55C /* PongiftConstants.m in Sources */,
+				A036718F1E641E2B00A08932 /* AFJSONResponseSerializerWithData.m in Sources */,
 				A052D9241DE2C41400D6F55C /* PongiftLocalNotificationManager.m in Sources */,
 				A052D9271DE2C41400D6F55C /* AFHTTPSessionManager.m in Sources */,
 				A052D9211DE2C41400D6F55C /* PongiftViewController.m in Sources */,

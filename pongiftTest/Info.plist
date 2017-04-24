@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.3</string>
+	<string>1.0.5</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -30,9 +30,11 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>11</string>
+	<string>18</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>Kftc-bankpay</string>
+		<string>bankwallet</string>
 		<string>citispay</string>
 		<string>citicardappkr</string>
 		<string>ispmobile</string>

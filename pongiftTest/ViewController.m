@@ -14,6 +14,7 @@
 #import "PongiftConstants.h"
 #import "PongiftRestService.h"
 #import "PongiftPersistenceManager.h"
+#import "PongiftConstants.h"
 
 
 
@@ -31,18 +32,14 @@
     [super viewDidLoad];
     
     
-    
     NSString *timeIntervalString = [PongiftUtils timeStampStringFromHour:9 andMinute:0];
     
     NSLog(@"%@", timeIntervalString);
     
-
-    
-    
-    
     
     
 }
+
 
 - (IBAction)openPongiftVCWithDebug:(id)sender {
     
@@ -56,26 +53,23 @@
 
 
 - (void)openPongiftVCWithDebugFlag:(BOOL)isDebug {
-
+    
     NSString *url;
     NSString *accessKey;
-    NSString *secretKey;
     
     if (isDebug) {
         
         accessKey = @"j8NtyUuoubAfGShaRQF2MA==";
-        secretKey = @"bD3QeKX2rhUcSVlubuy2Dg==";
         url = RootUrlDebug;
-
+        
     }
     else {
         
-        accessKey = @"oKx8mZREfK5FwQBjI3oDHg==";
-        secretKey = @"uO3LzzCJshT9VdcRnjRGvA==";
+        accessKey = @"YH66rPdlbWjq+reY8AHWcw==";
         url = RootUrl;
     }
     
-    [self requestSecretKeyWithUrl:url secretKey:secretKey andAccessKey:accessKey completion:^(bool compeltion) {
+    [self requestServiceIdWithUrl:url andAccessKey:accessKey completion:^(bool compeltion) {
         
         if (compeltion) {
             
@@ -91,18 +85,14 @@
 }
 
 
-- (void)requestSecretKeyWithUrl:(NSString*)url secretKey:(NSString*)secretKey andAccessKey:(NSString*)accessKey completion:(void(^)(bool compeltion)) completion{
+- (void)requestServiceIdWithUrl:(NSString*)url andAccessKey:(NSString*)accessKey completion:(void(^)(bool compeltion)) completion{
     
     PongiftRestService *restService = [[PongiftRestService alloc] initWithRootUrl:url];
     
     NSString *subUrl = SerivceInitializeUrl;
     
-    NSString *secretQuery = [[ServiceInitializeQuerySecretKey stringByAppendingString:secretKey] stringByAppendingString:@"&"];
-    NSString *accessQuery = [ServiceInitializeQueryAccessKey stringByAppendingString:accessKey];
-    
-    subUrl = [[subUrl stringByAppendingString:secretQuery] stringByAppendingString:accessQuery];
-    
-    [restService request:GET subUrl:subUrl params:nil progressBlock:^{
+    NSDictionary *params = @{ServiceInitializeAccessKey : accessKey};
+    [restService request:POST subUrl:subUrl params:params progressBlock:^{
         
     } successBlock:^(id _Nullable response) {
         
@@ -148,7 +138,6 @@
     [[PongiftAgent sharedInstance] schedulePongiftMemorialDayNotifications];
     
     [PongiftUtils showAlertWithMsg:[NSString stringWithFormat:@"알림이 등록되었습니다. (%2d시 %2d분)",hour,min] controller:self];
-    
     
 }
 
